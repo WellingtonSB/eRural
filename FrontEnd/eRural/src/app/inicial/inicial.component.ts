@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-inicial',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicialComponent implements OnInit {
 
+  private router: Router
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    window.scroll(0,0)
   }
+
+  sair(){
+    this.router.navigate(['/login'])
+    environment.token = ''
+    environment.id = 0
+    environment.nome = ''
+  }
+
+
+
 
 }
