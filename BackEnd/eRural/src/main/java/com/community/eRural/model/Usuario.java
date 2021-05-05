@@ -42,9 +42,9 @@ public class Usuario {
 	private String senha;
 
 	
-	@OneToMany(mappedBy = "Usuario", cascade = CascadeType.ALL)
-	@JsonIgnoreProperties("Usuario")
-	private List<Produtos> produtos;
+	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties("usuario")
+	private List<Produtos> produto;
 	
 	
 	public long getId() {
@@ -87,15 +87,12 @@ public class Usuario {
 		this.tipoUsuario = tipoUsuario;
 	}
 
-	public List<Produtos> getProdutos() {
-		return produtos;
+	public List<Produtos> getProduto() {
+		return produto;
 	}
 
-	public void setProdutos(List<Produtos> produtos) {
-		this.produtos = produtos;
+	public void setProduto(List<Produtos> produto) {
+		this.produto = produto;
 	}
-
-	
-	
 	
 }
