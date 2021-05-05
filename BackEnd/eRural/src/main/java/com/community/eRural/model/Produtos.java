@@ -45,6 +45,11 @@ public class Produtos {
 	@JsonIgnoreProperties("produtos")
 	private Categorias categorias;
 
+	@ManyToOne
+	@JsonIgnoreProperties("produtos")
+	private Usuario usuario;
+
+	
 	public long getId() {
 		return id;
 	}
@@ -99,6 +104,14 @@ public class Produtos {
 
 	public void setImagem(String imagem) {
 		this.imagem = imagem;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 	
