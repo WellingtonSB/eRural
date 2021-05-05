@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { InicialComponent } from './inicial/inicial.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,11 +18,13 @@ import { InicialComponent } from './inicial/inicial.component';
     MenuComponent,
     LoginComponent,
     CadastroComponent,
-    InicialComponent
+    InicialComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FontAwesomeModule
   ],
   providers: [],
