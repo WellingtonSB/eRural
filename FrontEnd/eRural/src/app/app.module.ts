@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { InicialComponent } from './inicial/inicial.component';
 import { FormsModule } from '@angular/forms';
+import { ProdutoProdutorComponent } from './produto-produtor/produto-produtor.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     CadastroComponent,
     InicialComponent,
+    ProdutoProdutorComponent,
    
   ],
   imports: [
