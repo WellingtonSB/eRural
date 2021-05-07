@@ -1,9 +1,7 @@
 .menuBar{
     background-color: #397900;
 }
-.fontMenu{
-    color: white;
-}
+
 .btn-outline-success{
     background-color: none;
     border-color: white;
@@ -13,4 +11,9 @@
     background-color: white;
     border-color: #397900;
     color: #397900;
+}
+
+.fontMenu{
+    color: black;
+    font-size: 18px;
 }
