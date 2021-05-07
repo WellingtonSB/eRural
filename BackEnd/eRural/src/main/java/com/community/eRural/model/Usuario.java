@@ -16,7 +16,7 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "Usuario")
+@Table(name = "usuario")
 public class Usuario {
 
 	@Id
@@ -42,9 +42,9 @@ public class Usuario {
 	private String senha;
 
 	
-	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
+	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("usuario")
-	private List<Produtos> produto;
+	private List<Produtos> produtos;
 	
 	
 	public long getId() {
@@ -87,12 +87,15 @@ public class Usuario {
 		this.tipoUsuario = tipoUsuario;
 	}
 
-	public List<Produtos> getProduto() {
-		return produto;
+	public List<Produtos> getProdutos() {
+		return produtos;
 	}
 
-	public void setProduto(List<Produtos> produto) {
-		this.produto = produto;
+	public void setProdutos(List<Produtos> produtos) {
+		this.produtos = produtos;
 	}
+
+	
+	
 	
 }
