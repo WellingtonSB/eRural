@@ -1,7 +1,9 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AjudaComponent } from './ajuda/ajuda.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { InicialComponent } from './inicial/inicial.component';
+import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
@@ -9,7 +11,9 @@ const routes: Routes = [
 
 {path: 'login', component: LoginComponent},
 {path: 'cadastro', component: CadastroComponent},
-{path: 'inicio', component: InicialComponent}
+{path: 'inicio', component: InicialComponent},
+{path: 'listaProdutos', component: ListaProdutoComponent},
+{path: 'ajuda', component: AjudaComponent}
 ];
 
 @NgModule({
@@ -17,3 +21,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

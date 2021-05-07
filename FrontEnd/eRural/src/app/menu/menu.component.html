@@ -22,11 +22,10 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item fontMenu" routerLink="/login">Login/Cadastrar</a>
-            <a class="dropdown-item fontMenu" href="#">Meus pedidos</a>
-            <a class="dropdown-item fontMenu" href="#">Minha conta</a>
-            <a class="dropdown-item fontMenu" href="#">Me ajuda!</a>
+            <a class="dropdown-item fontMenu" routerLink='/ajuda'>Me ajuda!</a>
+            <a class="dropdown-item fontMenu" routerLink='/listaProdutos'>Lista Produtos</a> <!--APAGAR DEPOIS-->
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item fontMenu" href="#">Sair</a>
+            <a class="dropdown-item fontMenu" (click)='sair()'>Sair</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -34,10 +33,8 @@
             Pedidos
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item fontMenu" href="#">Entrega</a>
-            <a class="dropdown-item fontMenu" href="#">Pagamento</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item fontMenu" href="#">Cancelamento</a>
+            <a class="dropdown-item fontMenu" routerLink="/login">Precisa estar logado!</a>
+            
           </div>
         </li>
         <li class="nav-item">

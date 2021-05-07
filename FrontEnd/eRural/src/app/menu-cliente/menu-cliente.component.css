@@ -1,12 +1,18 @@
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.btn-outline-success{
+    background-color: none;
+    border-color: white;
+    color: white;
 }
-body{
-    background-color: #000;
-    min-height: 200vh;
+.btn-outline-success:hover{
+    background-color: white;
+    border-color: #397900;
+    color: #397900;
+}
+
+.fontMenu{
+    color: black;
+    font-size: 18px;
 }
 .header1{
     position: fixed;
@@ -17,53 +23,24 @@ body{
     justify-content: space-between;
     align-items: center;
     transition: 0.06s;
-    padding: 40px 100px;
-    z-index: 100000; /*OLHAR ISSO*/
-}
-
-.header1.sticky{
-    padding:  5px 100px;
-    background: #0000;
-}
-
-.headerLogo{
-    position: relative; /*OLHAR ISSO*/
-    font-weight: 700;
     
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px0;
-    transition: 0.06s;
 }
-.header1 ul{
+.headerLogo{
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-weight: 700;
+    color: #fff
 }
-.header1 ul li{
-    position: relative;
-    list-style: none;
-}
-.header1 ul li a{
-    position: relative;
-    margin: 0 15px;
-    text-decoration: none;
-    color: #fff;
-    letter-spacing: 2px;
-    font-weight: 500px;
-    transition: 0.06s;
-}
-.banner{
-    position: relative;
-    background-color: orangered;
-    width: 100%;
-    height: 100vh;
-}
-.header1.sticky ul li a {
-    color: #0000;
+
+.header1{
+    
+        background-color: #397900;
+        transition: 0.06s;
+        z-index: 1
+    
 }
 .stick{
-    background-color: orange;
+    scroll-behavior: smooth;
+    transition: 0.06s;
+    opacity: .7;
+    z-index: 1
 }
