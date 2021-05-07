@@ -27,6 +27,7 @@ window.addEventListener("scroll", function(){
 })
 </script> */
 
+/*FUNCIONAL*/
 desce(){
 
   window.addEventListener("scroll", ()=>{ 
