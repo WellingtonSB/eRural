@@ -5,6 +5,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { InicialComponent } from './inicial/inicial.component';
 import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
 import { LoginComponent } from './login/login.component';
+import { ProdutoProdutorComponent } from './produto-produtor/produto-produtor.component';
 
 const routes: Routes = [
 {path: "", redirectTo: 'inicio', pathMatch: 'full' },
@@ -12,8 +13,10 @@ const routes: Routes = [
 {path: 'login', component: LoginComponent},
 {path: 'cadastro', component: CadastroComponent},
 {path: 'inicio', component: InicialComponent},
+{path: 'produto-produtor', component: ProdutoProdutorComponent},
 {path: 'listaProdutos', component: ListaProdutoComponent},
 {path: 'ajuda', component: AjudaComponent}
+
 ];
 
 @NgModule({

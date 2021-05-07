@@ -10,10 +10,12 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { InicialComponent } from './inicial/inicial.component';
 import { FormsModule } from '@angular/forms';
+import { ProdutoProdutorComponent } from './produto-produtor/produto-produtor.component';
 import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
 import { MenuProdutorComponent } from './menu-produtor/menu-produtor.component';
 import { AjudaComponent } from './ajuda/ajuda.component';
 import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
+
 
 
 @NgModule({
@@ -24,10 +26,12 @@ import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
     LoginComponent,
     CadastroComponent,
     InicialComponent,
+    ProdutoProdutorComponent,
     MenuClienteComponent,
     MenuProdutorComponent,
     AjudaComponent,
     ListaProdutoComponent,
+
    
   ],
   imports: [
