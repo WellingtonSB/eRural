@@ -1,7 +1,6 @@
 ul.contato {
     list-style: none;
     padding: 0;
-    
 }
 
 .page-footer{
@@ -20,6 +19,10 @@ ul.contato {
 {    
     color:white;
 }
+.contato li a:hover
+{    
+    color:rgb(78, 212, 16);
+}
 
 .logo{
     margin: 20px;
@@ -31,6 +34,85 @@ ul.contato {
     max-height: 100%;
 }
 
+
+.social-network
+{
+    justify-content: center;
+    align-items: center;
+}
+
+.social-network  .fa-github:hover
+{
+    opacity: 1;
+    color: rgb(78, 212, 16);
+}
+
+.social-network  .fa-instagram:hover
+{
+    opacity: 1;
+    color: rgb(78, 212, 16);
+}
+ul.social-network{
+    list-style:none;
+    padding: 0;
+}
+ul.social-network li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+    
+}
+
+.social-network ul
+{
+    width: 50px;
+    height: 50px;
+}
+.fa{
+    font-size: 35pt;
+    color: white;
+    padding: 10px;
+}
+
+ul.sci
+{
+margin: 0;
+padding: 0;
+}
+
+.sci li 
+{
+    margin-right:10px;
+    list-style: none;
+}
+
+.sci li img
+{
+    transform: scale(0.5);
+    opacity: 0.7;
+}
+
+
+
+.sci li img:hover
+{
+    opacity: 1;
+}
+
+.copyrigth p{
+    text-align: center;
+    color: #fff;
+}
+
+.wh-img-50 {
+  width: 50px;
+  height: 50px;
+}
+
+.wh-img-60 {
+  width: 60px;
+  height: 60px;
+}
 
 .social-network
 {
@@ -121,6 +203,3 @@ padding: 0;
     text-align: center;
     color: #fff;
 }
-
-
-
