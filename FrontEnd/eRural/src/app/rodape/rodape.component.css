@@ -1,8 +1,7 @@
+/* STYLE INFORMAÇÕES DE CONTATO*/
 ul.contato {
     list-style: none;
     padding: 0;
-    
-
 }
 
 .page-footer{
@@ -18,24 +17,29 @@ ul.contato {
     margin: 17px;
 }
 .contato li a
-{    
+{
     color:white;
 }
 .contato li a:hover
-{    
+{
     color:rgb(78, 212, 16);
 }
+/* /STYLE INFORMAÇÕES DE CONTATO*/
 
+/*STYLE LOGO E-RURAL*/
 .logo{
     margin: 20px;
     padding: 0;
 }
 .logo .logoErural
-{    
+{
     max-width: 100%;
     max-height: 100%;
 }
 
+/* /STYLE LOGO E-RURAL */
+
+/*STYLE GERES SOCIAIS*/
 
 .social-network
 {
@@ -43,21 +47,22 @@ ul.contato {
     align-items: center;
 }
 
-/*.social-network .fa-github 
-{
-    max-width: 10%;
-    max-height: 10%;
-    transform: scale(0.9);
-    opacity: 0.7;
-}*/
+ul.social-network{
+  list-style:none;
+  padding: 0;
+}
 
-/*.social-network .fa-instagram
+.social-network ul
 {
-    max-width: 10%;
-    max-height: 10%;
-    transform: scale(1.0);
-    opacity: 0.7;
-}*/
+    width: 50px;
+    height: 50px;
+}
+
+ul.social-network li{
+  display: inline;
+  margin: 0;
+  padding: 5px;
+}
 
 .social-network  .fa-github:hover
 {
@@ -70,163 +75,32 @@ ul.contato {
     opacity: 1;
     color: rgb(78, 212, 16);
 }
-ul.social-network{
-    list-style:none;
-    padding: 0;
-}
-ul.social-network li{
-    display: inline;
-    margin: 0;
-    padding: 5px;
-    
-}
 
-.social-network ul
-{
-    width: 50px;
-    height: 50px;
-}
-.fa{
+
+.fa{          /* DIMENSÕES E CORES LOGOS/*/
     font-size: 35pt;
     color: white;
     padding: 10px;
 }
-
-/*.pagamento p
-{   
-    text-align: center;
-    font-size: 20px;
-    margin:30px;
-    padding: 0;
-    color: white;
-}*/
-
-ul.sci
-{
-margin: 0;
-padding: 0;
-}
-
-.sci li 
-{
-    margin-right:10px;
-    list-style: none;
-}
-
-.sci li img
-{
-    transform: scale(0.5);
-    opacity: 0.7;
-}
+/* /STYLE GERES SOCIAIS */
 
 
+/*STYLE  MÉTODOS DE PAGAMENTO*/
 
-.sci li img:hover
-{
-    opacity: 1;
-}
-
-.copyrigth p{
-    text-align: center;
-    color: #fff;
-}
-
-.wh-img-50 {
+.wh-img-50 {  /* STYLE LOGOS MASTER E VISA*/
   width: 50px;
   height: 50px;
 }
 
-.wh-img-60 {
+.wh-img-60 {  /* STYLE LOGOS AMEX E ELO*/
   width: 60px;
   height: 60px;
 }
+/* /STYLE  MÉTODOS DE PAGAMENTO */
 
-.social-network
-{
-    justify-content: center;
-    align-items: center;
-}
-
-.social-network .fa-github 
-{
-    max-width: 10%;
-    max-height: 10%;
-    transform: scale(0.9);
-    opacity: 0.7;
-}
-
-.social-network .fa-instagram
-{
-    max-width: 10%;
-    max-height: 10%;
-    transform: scale(1.0);
-    opacity: 0.7;
-}
-
-.social-network  .fa-github:hover
-{
-    opacity: 1;
-    color: rgb(78, 212, 16);
-}
-
-ul.social-network{
-    list-style:none;
-    padding: 0;
-}
-ul.social-network li{
-    display: inline;
-    margin: 0;
-    padding: 10px;
-    
-}
-
-.social-network ul
-{
-    width: 50px;
-    height: 50px;
-}
-.fa{
-    font-size: 35pt;
-    color: white;
-    padding: 10px;
-}
-
-.pagamento p
-{   
-    text-align: center;
-    font-size: 20px;
-    margin:30px;
-    padding: 0;
-    color: white;
-}
-
-
-ul.sci
-{
-margin: 0;
-padding: 0;
-}
-
-.sci li 
-{
-    margin-right:10px;
-    list-style: none;
-}
-
-.sci li img
-{
-    transform: scale(0.5);
-    opacity: 0.7;
-}
-
-
-
-.sci li img:hover
-{
-    opacity: 1;
-}
-
+/*STYLE  COPYRIGHT*/
 .copyrigth p{
-    text-align: center;
-    color: #fff;
+  text-align: center;
+  color: #fff;
 }
+/* /STYLE  COPYRIGHT */

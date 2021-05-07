@@ -12,6 +12,7 @@ import { InicialComponent } from './inicial/inicial.component';
 import { FormsModule } from '@angular/forms';
 import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
 import { MenuProdutorComponent } from './menu-produtor/menu-produtor.component';
+import { InicioProdutorComponent } from './inicio-produtor/inicio-produtor.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { MenuProdutorComponent } from './menu-produtor/menu-produtor.component';
     InicialComponent,
     MenuClienteComponent,
     MenuProdutorComponent,
+    InicioProdutorComponent,
    
   ],
   imports: [
