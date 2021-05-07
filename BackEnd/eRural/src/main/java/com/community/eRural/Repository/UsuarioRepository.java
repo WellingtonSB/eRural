@@ -7,13 +7,11 @@ import org.springframework.stereotype.Repository;
 
 import com.community.eRural.model.Usuario;
 
+import antlr.collections.List;
+
 @Repository
-
-
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-	public List<Usuario> findAllByNomeContainingIgnoreCase(String nome);
-
 	public Optional<Usuario> findByUsuario(String userName);
-
+	public Optional<Usuario> findBytipoUsuario(String tipoUsuario);
 
 }

@@ -35,7 +35,7 @@ public class Categorias {
 	@URL
 	private String imagem;
 
-	@OneToMany(mappedBy = "categorias", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "categorias", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("categorias")
 	private List<Produtos> produtos;
 
