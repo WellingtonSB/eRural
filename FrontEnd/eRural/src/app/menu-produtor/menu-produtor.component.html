@@ -18,31 +18,25 @@
         
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fontMenu mr-3 ml-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Menu
+            Minha conta
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item fontMenu" routerLink="/login">Login/Cadastrar</a>
-            <a class="dropdown-item fontMenu" routerLink='/ajuda'>Me ajuda!</a>
-            <a class="dropdown-item fontMenu" routerLink='/inicio-produtor'>Me ajuda!</a>
-            <a class="dropdown-item fontMenu" routerLink='/cadastro-produto'>Me ajuda!</a>
-        
-            <a class="dropdown-item fontMenu" routerLink='/listaProdutos'>Lista Produtos</a> <!--APAGAR DEPOIS-->
+            <a class="dropdown-item fontMenu" routerLink="">Meus dados</a>
+            <a class="dropdown-item fontMenu" href="#">Me Ajuda!</a>
             <div class="dropdown-divider"></div>
-            
             <a class="dropdown-item fontMenu" (click)='sair()'>Sair</a>
           </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fontMenu mr-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Pedidos
+            Meus Produtos
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item fontMenu" routerLink="/login">Precisa estar logado!</a>
-            
+            <a class="dropdown-item fontMenu" href="#">Cadastrar</a> <!-- tela que abre formulario para cadastrar produto-->
+            <a class="dropdown-item fontMenu" href="#">Vendidos</a> <!--tela que puxa o historico dos produtos vendidos-->
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item fontMenu" href="#">Cancelamento</a> <!--o vendedor pode cancelar uma venda-->
           </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><img src="https://i.imgur.com/ePoMshG.png" alt="Cesta" width="27px" height="27px" class="img-fluid"></a>
         </li>
       </ul>
     </div>
