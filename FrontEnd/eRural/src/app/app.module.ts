@@ -32,7 +32,6 @@ import { MenuProdutorComponent } from './menu-produtor/menu-produtor.component';
     HttpClientModule,
     FontAwesomeModule,
     FormsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
