@@ -91,7 +91,7 @@ public class Usuario {
 		return produtos;
 	}
 
-	public void setProdutos(List<Produtos> produtos) {
+	 void setProdutos(List<Produtos> produtos) {
 		this.produtos = produtos;
 	}
 
