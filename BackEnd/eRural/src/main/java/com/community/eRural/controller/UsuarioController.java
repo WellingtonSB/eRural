@@ -23,7 +23,7 @@ import com.community.eRural.model.Usuario;
 @RequestMapping("/usuarios")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UsuarioController {
-//teste
+
 	@Autowired
 	private UsuarioRepository repository;
 

@@ -14,6 +14,8 @@ import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
 import { MenuProdutorComponent } from './menu-produtor/menu-produtor.component';
 import { AjudaComponent } from './ajuda/ajuda.component';
 import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
+import { ProdutoProdutorComponent } from './produto-produtor/produto-produtor.component';
+import { InicioProdutorComponent } from './inicio-produtor/inicio-produtor.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
     MenuClienteComponent,
     MenuProdutorComponent,
     AjudaComponent,
+    InicioProdutorComponent,
     ListaProdutoComponent,
+    ProdutoProdutorComponent
    
   ],
   imports: [
