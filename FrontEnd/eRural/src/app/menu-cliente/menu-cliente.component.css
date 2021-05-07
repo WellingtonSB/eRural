@@ -1,4 +1,5 @@
 
+
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +8,22 @@
 body{
     background-color: #000;
     min-height: 200vh;
+=======
+.btn-outline-success{
+    background-color: none;
+    border-color: white;
+    color: white;
+}
+.btn-outline-success:hover{
+    background-color: white;
+    border-color: #397900;
+    color: #397900;
+}
+
+.fontMenu{
+    color: black;
+    font-size: 18px;
+
 }
 .header1{
     position: fixed;
@@ -17,6 +34,7 @@ body{
     justify-content: space-between;
     align-items: center;
     transition: 0.06s;
+
     padding: 40px 100px;
     z-index: 100000; /*OLHAR ISSO*/
 }
@@ -66,4 +84,26 @@ body{
 }
 .stick{
     background-color: orange;
+
+    
+}
+.headerLogo{
+    position: relative;
+    font-weight: 700;
+    color: #fff
+}
+
+.header1{
+    
+        background-color: #397900;
+        transition: 0.06s;
+        z-index: 1
+    
+}
+.stick{
+    scroll-behavior: smooth;
+    transition: 0.06s;
+    opacity: .7;
+    z-index: 1
+
 }
