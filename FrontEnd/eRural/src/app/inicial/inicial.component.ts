@@ -9,22 +9,10 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class InicialComponent implements OnInit {
 
-  private router: Router
-
-  constructor() { }
+  constructor(
+    private router:Router
+  ) {}
 
   ngOnInit() {
-    window.scroll(0,0)
   }
-
-  sair(){
-    this.router.navigate(['/login'])
-    environment.token = ''
-    environment.id = 0
-    environment.nome = ''
-  }
-
-
-
-
 }

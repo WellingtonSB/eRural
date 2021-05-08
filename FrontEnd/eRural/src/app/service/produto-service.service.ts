@@ -17,7 +17,7 @@ export class ProdutoServiceService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
-  getAllProduto(): Observable<Produtos[]>{
+getAllProduto(): Observable<Produtos[]>{
     return this.http.get<Produtos[]>('http://localhost:8080/produtos', this.token)
 }
 
@@ -32,6 +32,8 @@ putProduto(produto: Produtos): Observable<Produtos>{
 deleteProduto(id: number){
   return this.http.delete(`http://localhost:8080/produtos/${id}`, this.token)
 }
+
+
 /* VAMOS PEGAR O TEMA RESPONSAVEL PELO ID */
 getByIdProduto(id: number): Observable<Produtos>{
   return this.http.get<Produtos>(`http://localhost:8080/produtos/${id}`, this.token)
