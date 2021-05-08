@@ -16,6 +16,7 @@ import { AjudaComponent } from './ajuda/ajuda.component';
 import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
 import { ProdutoProdutorComponent } from './produto-produtor/produto-produtor.component';
 import { InicioProdutorComponent } from './inicio-produtor/inicio-produtor.component';
+import { InicioClienteComponent } from './inicio-cliente/inicio-cliente.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { InicioProdutorComponent } from './inicio-produtor/inicio-produtor.compo
     AjudaComponent,
     InicioProdutorComponent,
     ListaProdutoComponent,
-    ProdutoProdutorComponent
+    ProdutoProdutorComponent,
+    InicioClienteComponent
    
   ],
   imports: [
