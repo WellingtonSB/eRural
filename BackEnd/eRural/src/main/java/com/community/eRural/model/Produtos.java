@@ -23,28 +23,19 @@ public class Produtos {
 	private long id;
 
 	@NotNull
-	@Size(min = 3, max = 30)
 	private String nome;
-
 	@NotNull
 	private int quantidade;
-
 	@NotNull
 	private double peso;
-
 	@NotNull
-	@Digits(integer = 5, fraction = 2)
 	private double preco;
-	
-	@NotNull	
+	@NotNull
+	private String descricao;
+	@NotNull
 	@URL
 	private String imagem;
 
-	
-	@NotNull
-	@Size (min= 3, max=10)
-	private String tipoCategoria;
-	
 	
 	@ManyToOne
 	@JsonIgnoreProperties("produtos")
@@ -53,8 +44,16 @@ public class Produtos {
 	@ManyToOne
 	@JsonIgnoreProperties("produtos")
 	private Usuario usuario;
-
 	
+	
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
 	public long getId() {
 		return id;
 	}
