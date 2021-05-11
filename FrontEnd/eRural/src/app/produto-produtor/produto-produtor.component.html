@@ -20,15 +20,11 @@
           <label for="textNome" class="control-label">Nome</label>
           <input [(ngModel)]='produto.nome' id="textNome" class="form-control" placeholder="Nome do Produto" type="text" required>
         </div>
-
         <div class="form-group">
           <!--AS OPTIONS DEVERAM SER ALTERADAS POSTERIORMENTE, LINKAR COM CATEGORIA-->
           <label for="exampleFormControlSelect1">Categoria</label>
-
           <select class="form-control" id="categoria" name="categoria" [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
             <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.nome}}</option> <!--aqui iremos chamar as categorias que iremos cadastrar, colocaremos um *ngFor-->
-
-
           </select>
         </div>
 
