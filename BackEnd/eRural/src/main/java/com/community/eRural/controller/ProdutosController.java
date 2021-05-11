@@ -25,7 +25,7 @@ public class ProdutosController {
 	
 	@Autowired
 	private ProdutosRepository repository;
-	//ProdutosRepository resposta = new repository
+	
 	
 	@GetMapping
 	public ResponseEntity<List<Produtos>> GetAll(){
@@ -33,7 +33,7 @@ public class ProdutosController {
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Produtos>GetById(@PathVariable long id)//@PathVariable é utilizado quando o valor da variavel é passado diretamente da URL
+	public ResponseEntity<Produtos>GetById(@PathVariable long id)
 	{
 		return repository.findById(id).map(resp->ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 	}
@@ -46,12 +46,12 @@ public class ProdutosController {
 	@PostMapping
 	public ResponseEntity<Produtos> post(@RequestBody Produtos produtos){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(produtos));
-	}//inclui dados no db.
+	}
 	
 	@PutMapping
 	public ResponseEntity<Produtos> put(@RequestBody Produtos produtos){
 		return ResponseEntity.status(HttpStatus.OK).body(repository.save(produtos));
-	}//Modifica dados no db.
+	}
 	
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable long id){

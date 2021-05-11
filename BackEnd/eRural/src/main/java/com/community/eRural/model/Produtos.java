@@ -34,13 +34,18 @@ public class Produtos {
 
 	@NotNull
 	@Digits(integer = 5, fraction = 2)
-										
 	private double preco;
 	
 	@NotNull	
 	@URL
 	private String imagem;
 
+	
+	@NotNull
+	@Size (min= 3, max=10)
+	private String tipoCategoria;
+	
+	
 	@ManyToOne
 	@JsonIgnoreProperties("produtos")
 	private Categorias categorias;
