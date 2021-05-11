@@ -25,11 +25,6 @@ export class ListaProdutoComponent implements OnInit {
       console.log('ok')
     }
   }
-
-
-
-
-  
   findAllProduto(){
     this.produtoService.getAllProduto().subscribe((resp: Produtos[])=>{
       this.listaProdutos = resp
