@@ -15,11 +15,9 @@ import { ProdutoServiceService } from '../service/produto-service.service';
   styleUrls: ['./produto-produtor.component.css']
 })
 export class ProdutoProdutorComponent implements OnInit {
-  produto:Produtos = new Produtos()
+  produto: Produtos = new Produtos()
 
   idUser = environment.id
-
-  produto: Produtos = new Produtos()
   categoria: Categorias = new Categorias()
   usuario: Usuario = new Usuario()
 
