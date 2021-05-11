@@ -2,7 +2,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse menuBar text-center m-auto" id="conteudoNavbarSuportado">
       <ul class="navbar-nav m-auto">
         <li class="nav-item active">
@@ -15,7 +15,7 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
               </div>
           </form>
-        
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fontMenu mr-3 ml-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Menu
@@ -24,11 +24,13 @@
             <a class="dropdown-item fontMenu" routerLink="/login">Login/Cadastrar</a>
             <a class="dropdown-item fontMenu" routerLink='/ajuda'>Me ajuda!</a>
             <a class="dropdown-item fontMenu" routerLink='/inicio-produtor'>Me ajuda!</a>
-            <a class="dropdown-item fontMenu" routerLink='/cadastro-produto'>Me ajuda!</a>
-        
+            <a class="dropdown-item fontMenu" routerLink='/listaProdutos'> LISTA!</a>
+            <a class="dropdown-item fontMenu" routerLink='/cadastro-produto'>CADASTRO!</a>
+
+
             <a class="dropdown-item fontMenu" routerLink='/listaProdutos'>Lista Produtos</a> <!--APAGAR DEPOIS-->
             <div class="dropdown-divider"></div>
-            
+
             <a class="dropdown-item fontMenu" (click)='sair()'>Sair</a>
           </div>
         </li>
@@ -38,7 +40,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item fontMenu" routerLink="/login">Precisa estar logado!</a>
-            
+
           </div>
         </li>
         <li class="nav-item">

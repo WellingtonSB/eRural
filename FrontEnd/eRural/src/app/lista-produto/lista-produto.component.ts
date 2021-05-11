@@ -26,10 +26,11 @@ export class ListaProdutoComponent implements OnInit {
       this.findAllProduto() /* QUERO Q APAREÇA QUANDO A TELA INICIAR */
       console.log('ok')
     }
+    this.findAllProduto()
   }
 
   findAllProduto(){
-    
+
     this.produtoService.getAllProduto().subscribe((resp: Produtos[])=>{
       this.listaProdutos = resp
       console.log('ko')
