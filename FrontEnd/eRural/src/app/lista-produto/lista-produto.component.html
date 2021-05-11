@@ -19,8 +19,11 @@
                 <label></label>
                 <label>Quantidade: {{item.quantidade}}</label><br>
                 <label>Peso: {{item.peso}}</label>
+            
                 
-                <a href="#">adicionar ao carrinho</a>
+                <button *ngIf='authService.produtor()'>Editar</button>
+                <button *ngIf='authService.produtor()'>Deletar</button>
+                <a *ngIf='authService.cliente()' href="#">adicionar ao carrinho</a>
                 <!--CARRINHO-->
             </div>
         </div>
