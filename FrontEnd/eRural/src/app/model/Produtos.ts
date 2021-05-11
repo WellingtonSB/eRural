@@ -9,6 +9,7 @@ export class Produtos
     public peso:number
     public preco:number
     public imagem:string
+    public descricao: String
     public usuario: Usuario
     public categorias: Categorias
 }

@@ -16,7 +16,7 @@ import { AjudaComponent } from './ajuda/ajuda.component';
 import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
 import { ProdutoProdutorComponent } from './produto-produtor/produto-produtor.component';
 import { InicioProdutorComponent } from './inicio-produtor/inicio-produtor.component';
-
+import { InicioClienteComponent } from './inicio-cliente/inicio-cliente.component';
 
 
 @NgModule({
@@ -32,7 +32,12 @@ import { InicioProdutorComponent } from './inicio-produtor/inicio-produtor.compo
     AjudaComponent,
     InicioProdutorComponent,
     ListaProdutoComponent,
+<<<<<<< HEAD
     ProdutoProdutorComponent
+=======
+    ProdutoProdutorComponent,
+    InicioClienteComponent
+>>>>>>> 59757d0ae6effb171150c5fad2e9576a18b5e537
    
   ],
   imports: [

@@ -1,23 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
-  selector: 'app-inicial',
-  templateUrl: './inicial.component.html',
-  styleUrls: ['./inicial.component.css']
+  selector: 'app-inicio-cliente',
+  templateUrl: './inicio-cliente.component.html',
+  styleUrls: ['./inicio-cliente.component.css']
 })
-export class InicialComponent implements OnInit {
+export class InicioClienteComponent implements OnInit {
+  router: any;
 
-  constructor(
-    private router:Router
-  ) {}
+  constructor() { }
 
-  
+    
   ngOnInit() {
     if(environment.token == ''){
       this.router.navigate(['/inicio'])
     }
     window.scroll(0, 0)
   }
+
 }

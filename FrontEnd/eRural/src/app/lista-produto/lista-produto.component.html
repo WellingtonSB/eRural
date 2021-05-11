@@ -2,26 +2,27 @@
 
     <div class="row mt-5">
         <div class="col-md-3 justify-content-center">
-            <div class="mt-5 ml-5 d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
-                <div class="mb-auto p-2 bd-highlight">{{produto.categorias}}</div>     
+            <div *ngFor='let cat of listaCategorias'class="mt-2 ml-5 d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
+                <div *ngFor='let prod of listaProdutos' class="mt-1 ml-5 d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
+                {{cat.nome}}
+                {{prod.nome}}
             </div>
         </div>
-            <div *ngFor='let item of listaProdutos' class="product card mr-3 mt-5 ml-3 mb-2">
-                <div class= "imgbox">
-                    <img src="{{produto.imagem}}">
-                </div>
-                <div class = "details">
-                    <h2>{{produto.nome}}<br><span>{{produto.categorias}}</span></h2>
-                    <div class="preco">{{produto.preco}}</div>
-                    <label></label>
-                <label>Quantidade: {{produto.quantidade}}</label><br>
-                <label>Peso: {{produto.peso}}</label>
-                
-                <a href="#">adicionar ao carrinho</a> <!--CARRINHO-->
-                </div>
-                
+        </div>
+        <div *ngFor='let item of listaProdutos' class="product card mr-3 mt-5 ml-3 mb-2">
+            <div class="imgbox">
+                <img src="{{item.imagem}}">
             </div>
-           
+            <div class="details">
+                <h2>{{item.nome}}<br><span>{{item.categorias}}</span></h2>
+                <div class="preco">{{item.preco}}</div>
+                <label></label>
+                <label>Quantidade: {{item.quantidade}}</label><br>
+                <label>Peso: {{item.peso}}</label>
+                <button *ngIf='authService.produtor()== true'>Editar</button>
+                <button *ngIf='authService.produtor()== true'>Deletar</button>
+                <a *ngIf='authService.cliente()== true' href="#">adicionar ao carrinho</a>
+            </div>
+        </div>
     </div>
 </div>
-
