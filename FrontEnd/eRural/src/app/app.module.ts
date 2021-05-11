@@ -27,27 +27,20 @@ import { InicioProdutorComponent } from './inicio-produtor/inicio-produtor.compo
     LoginComponent,
     CadastroComponent,
     InicialComponent,
-<<<<<<< HEAD
-=======
     MenuClienteComponent,
     MenuProdutorComponent,
     AjudaComponent,
     InicioProdutorComponent,
     ListaProdutoComponent,
     ProdutoProdutorComponent
->>>>>>> 71770f3a7da5be0c7819b93285a33191896271ae
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-<<<<<<< HEAD
-    FontAwesomeModule
-=======
     FontAwesomeModule,
     FormsModule
->>>>>>> 71770f3a7da5be0c7819b93285a33191896271ae
   ],
   providers: [],
   bootstrap: [AppComponent]

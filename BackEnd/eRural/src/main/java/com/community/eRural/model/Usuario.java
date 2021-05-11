@@ -42,8 +42,8 @@ public class Usuario {
 	private String senha;
 
 	
-	@OneToMany(mappedBy = "Usuario", cascade = CascadeType.ALL)
-	@JsonIgnoreProperties("Usuario")
+	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+	@JsonIgnoreProperties("usuario")
 	private List<Produtos> produtos;
 	
 	

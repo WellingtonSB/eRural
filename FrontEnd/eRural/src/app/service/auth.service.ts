@@ -1,39 +1,48 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-<<<<<<< HEAD
-=======
 import { Observable } from 'rxjs';
 import { Usuario } from '../model/Usuario';
 import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../model/UserLogin';
 
->>>>>>> 71770f3a7da5be0c7819b93285a33191896271ae
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-<<<<<<< HEAD
-  constructor(
-    private Http:HttpClient
-  ) { }
-=======
-  serverPort = environment.server + environment.port
-
   constructor( private http:HttpClient ) {}
 
   cadastro( user:Usuario):Observable<Usuario>{
-    return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar',user)
+    return this.http.post<Usuario>(`${environment.server}/usuarios/cadastrar`,user)
   }
 
   entrar(userLogin:UserLogin): Observable<UserLogin>{
-      return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin)
+      return this.http.post<UserLogin>(`${environment.server}/usuarios/logar`, userLogin)
     }
 
-  
+    logado(){
+      let ok: boolean=false
+      if(environment.token != ''){
+        ok =true
+      }
+      return ok
+    }
 
+    produtor(){
+      let ok: boolean =false
+      if(environment.tipo == 'produtor'){
+        ok =true
+      }
+      return ok
+    }
 
+    cliente(){
+      let ok: boolean =false
+      if(environment.tipo == 'cliente'){
+        ok =true
+      }
+      return ok
+    }
 
->>>>>>> 71770f3a7da5be0c7819b93285a33191896271ae
 }
