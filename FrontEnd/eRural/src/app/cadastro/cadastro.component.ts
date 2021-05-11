@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 
@@ -14,11 +15,15 @@ export class CadastroComponent implements OnInit {
   tipo: string
 
   constructor(
+    private route: ActivatedRoute,
     private authService: AuthService,
     private router: Router
   ) { }
 
   ngOnInit() {
+    if(environment.token == ''){
+      this.router.navigate(['/entrar'])
+    }
     window.scroll(0, 0)
   }
 

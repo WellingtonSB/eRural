@@ -21,8 +21,28 @@ export class AuthService {
       return this.http.post<UserLogin>(`${environment.server}/usuarios/logar`, userLogin)
     }
 
+    logado(){
+      let ok: boolean=false
+      if(environment.token != ''){
+        ok =true
+      }
+      return ok
+    }
 
+    produtor(){
+      let ok: boolean =false
+      if(environment.tipo == 'produtor'){
+        ok =true
+      }
+      return ok
+    }
 
-
+    cliente(){
+      let ok: boolean =false
+      if(environment.tipo == 'cliente'){
+        ok =true
+      }
+      return ok
+    }
 
 }

@@ -30,7 +30,15 @@ export class LoginComponent implements OnInit {
       environment.token = this.userLogin.token
       environment.id = this.userLogin.id
       environment.nome = this.userLogin.nome
-      this.router.navigate(['/inicio'])
+      environment.tipo = this.userLogin.tipoUsuario
+      
+      if(this.userLogin.tipoUsuario == 'produtor'){
+        this.router.navigate(['/inicio-produtor'])
+      }
+      if(this.userLogin.tipoUsuario == 'cliente'){
+        this.router.navigate(['/inicio-cliente'])
+      }
+      
     }, erro=>{
       if(erro.status == 500){
         alert('usuario ou senha incorreto!')
@@ -40,6 +48,9 @@ export class LoginComponent implements OnInit {
 
 
 
+
+
+ 
 
 
 

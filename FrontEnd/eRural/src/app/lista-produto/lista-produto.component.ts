@@ -14,26 +14,22 @@ export class ListaProdutoComponent implements OnInit {
   produto: Produtos = new Produtos
   listaProdutos: Produtos[]
 
-
   constructor(
     private router: Router,
     private produtoService: ProdutoServiceService
-  ) { }
+  ){}
 
   ngOnInit() {
-
     if(environment.token != ''){
       this.findAllProduto() /* QUERO Q APAREÇA QUANDO A TELA INICIAR */
-      console.log('ok')
+     
     }
+    this.findAllProduto()
   }
-
   findAllProduto(){
-    
     this.produtoService.getAllProduto().subscribe((resp: Produtos[])=>{
       this.listaProdutos = resp
-      console.log('ko')
+
     })
   }
-
 }
