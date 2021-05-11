@@ -11,19 +11,17 @@ import { UserLogin } from '../model/UserLogin';
 })
 export class AuthService {
 
-  serverPort = environment.server + environment.port
-
   constructor( private http:HttpClient ) {}
 
   cadastro( user:Usuario):Observable<Usuario>{
-    return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar',user)
+    return this.http.post<Usuario>(`${environment.server}/usuarios/cadastrar`,user)
   }
 
   entrar(userLogin:UserLogin): Observable<UserLogin>{
-      return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin)
+      return this.http.post<UserLogin>(`${environment.server}/usuarios/logar`, userLogin)
     }
 
-  
+
 
 
 
