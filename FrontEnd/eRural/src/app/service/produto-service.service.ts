@@ -28,10 +28,10 @@ export class ProdutoServiceService {
   }
 
   deleteProduto(id: number) {
-    return this.http.delete(`${environment}/produtos/${id}`, this.token)
+    return this.http.delete(`${environment.server}/produtos/${id}`, this.token)
   }
   /* VAMOS PEGAR O TEMA RESPONSAVEL PELO ID */
   getByIdProduto(id: number): Observable<Produtos> {
-    return this.http.get<Produtos>(`${environment}/produtos/${id}`, this.token)
+    return this.http.get<Produtos>(`${environment.server}/produtos/${id}`, this.token)
   }
 }
