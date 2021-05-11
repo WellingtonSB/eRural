@@ -19,12 +19,9 @@
                 <label></label>
                 <label>Quantidade: {{item.quantidade}}</label><br>
                 <label>Peso: {{item.peso}}</label>
-            
-                
-                <button *ngIf='authService.produtor()'>Editar</button>
-                <button *ngIf='authService.produtor()'>Deletar</button>
-                <a *ngIf='authService.cliente()' href="#">adicionar ao carrinho</a>
-                <!--CARRINHO-->
+                <button *ngIf='authService.produtor()== true'>Editar</button>
+                <button *ngIf='authService.produtor()== true'>Deletar</button>
+                <a *ngIf='authService.cliente()== true' href="#">adicionar ao carrinho</a>
             </div>
         </div>
     </div>

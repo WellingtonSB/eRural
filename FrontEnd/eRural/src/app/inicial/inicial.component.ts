@@ -13,6 +13,11 @@ export class InicialComponent implements OnInit {
     private router:Router
   ) {}
 
+  
   ngOnInit() {
+    if(environment.token == ''){
+      this.router.navigate(['/inicio'])
+    }
+    window.scroll(0, 0)
   }
 }

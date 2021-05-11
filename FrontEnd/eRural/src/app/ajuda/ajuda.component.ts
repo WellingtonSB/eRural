@@ -17,7 +17,7 @@ export class AjudaComponent implements OnInit {
   
   ngOnInit() {
     if(environment.token == ''){
-      this.router.navigate(['/entrar'])
+      this.router.navigate(['/inicio'])
     }
     window.scroll(0, 0)
   }
