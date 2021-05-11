@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { environment } from 'src/environments/environment.prod';
 import { Categorias } from '../model/Categorias';
 import { Produtos } from '../model/Produtos';
@@ -14,6 +15,7 @@ import { ProdutoServiceService } from '../service/produto-service.service';
   styleUrls: ['./produto-produtor.component.css']
 })
 export class ProdutoProdutorComponent implements OnInit {
+  produto:Produtos = new Produtos()
 
   idUser = environment.id
 
@@ -71,6 +73,7 @@ export class ProdutoProdutorComponent implements OnInit {
     })
 
   }
+
 
 
 }

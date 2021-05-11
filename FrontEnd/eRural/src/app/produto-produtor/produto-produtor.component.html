@@ -21,21 +21,26 @@
           <input [(ngModel)]='produto.nome' id="textNome" class="form-control" placeholder="Nome do Produto" type="text" required>
         </div>
 
-        <div class="form-group"> <!--AS OPTIONS DEVERAM SER ALTERADAS POSTERIORMENTE, LINKAR COM CATEGORIA-->
+        <div class="form-group">
+          <!--AS OPTIONS DEVERAM SER ALTERADAS POSTERIORMENTE, LINKAR COM CATEGORIA-->
           <label for="exampleFormControlSelect1">Categoria</label>
+
           <select class="form-control" id="categoria" name="categoria" [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
             <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.nome}}</option> <!--aqui iremos chamar as categorias que iremos cadastrar, colocaremos um *ngFor-->
+
 
           </select>
         </div>
 
         <div class="form-group">
           <label for="textQuantidade" class="control-label">Quantidade</label>
+
           <input [(ngModel)]='produto.quantidade' id="textQuantidade" class="form-control" placeholder="Digite a Quantidade" type="number" required>
         </div>
         <div class="form-group">
           <label for="textPeso" class="control-label">Peso</label>
           <input [(ngModel)]='produto.peso' id="textPeso" class="form-control" placeholder="Digite o Peso" type="number" required>
+
         </div>
         <div class="form-group">
           <label for="textPreço" class="control-label">Preço</label>
@@ -58,11 +63,12 @@
 
           <!--Botao cadastrar-->
           <button type="submit" class="btn btn-outline-success ml-4" (click)='postarProduto()'>
+
             <i class="fa fa-check" aria-hidden="true"></i> Cadastrar</button>
           <!--/Botao cadastrar-->
         </div>
       </div>
     </div>
   </div>
-
 </div>
+

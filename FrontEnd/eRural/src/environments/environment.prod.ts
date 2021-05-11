@@ -1,5 +1,3 @@
-
-
 export const environment = {
   production: true,
   server: 'http://localhost:',
@@ -7,5 +5,6 @@ export const environment = {
   token: '',
   nome: '',
   id: 0,
+  tipo:''
   
 };
