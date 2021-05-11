@@ -6,19 +6,21 @@
                 <div class="mb-auto p-2 bd-highlight">{{produto.categorias}}</div>
             </div>
         </div>
-        <div *ngFor='let item of listaProdutos' class="product card mr-3 mt-5 ml-3 mb-2">
-            <div class="imgbox">
-                <img src="{{produto.imagem}}">
+
+            <div *ngFor='let item of listaProdutos' class="product card mr-3 mt-5 ml-3 mb-2">
+                <div class= "imgbox">
+                    <img src="{{item.imagem}}">
+                </div>
+                <div class = "details">
+                    <h2>{{item.nome}}<br><span>{{item.categorias}}</span></h2>
+                    <div class="preco">{{item.preco}}</div>
+                    <label></label>
+                <label>Quantidade: {{item.quantidade}}</label><br>
+                <label>Peso: {{item.peso}}</label>
+
+                <a href="#">adicionar ao carrinho</a> <!--CARRINHO-->
+                </div>
+
             </div>
-            <div class="details">
-                <h2>{{produto.nome}}<br><span>{{produto.categorias}}</span></h2>
-                <div class="preco">{{produto.preco}}</div>
-                <label></label>
-                <label>Quantidade: {{produto.quantidade}}</label><br>
-                <label>Peso: {{produto.peso}}</label>
-                <a href="#">adicionar ao carrinho</a>
-                <!--CARRINHO-->
-            </div>
-        </div>
     </div>
 </div>

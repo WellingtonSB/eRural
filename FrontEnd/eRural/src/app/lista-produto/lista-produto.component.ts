@@ -22,13 +22,14 @@ export class ListaProdutoComponent implements OnInit {
   ngOnInit() {
     if(environment.token != ''){
       this.findAllProduto() /* QUERO Q APAREÇA QUANDO A TELA INICIAR */
-      console.log('ok')
+     
     }
+    this.findAllProduto()
   }
   findAllProduto(){
     this.produtoService.getAllProduto().subscribe((resp: Produtos[])=>{
       this.listaProdutos = resp
-      console.log('ko')
+
     })
   }
 }
