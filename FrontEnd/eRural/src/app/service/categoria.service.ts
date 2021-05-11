@@ -18,23 +18,23 @@ export class CategoriaService {
   }
 
   getAllCategoria(): Observable<Categorias[]>{
-    return this.http.get<Categorias[]>('http://localhost:8080/categorias', this.token)
-  }
+    return this.http.get<Categorias[]>(`${environment.server}/produtos`, this.token)
+}
 
-  postCategoria(categorias: Categorias): Observable<Categorias>{
-  return this.http.post<Categorias>('http://localhost:8080/categorias', categorias, this.token)
-  }
+postCategoria(categorias: Categorias): Observable<Categorias>{
+  return this.http.post<Categorias>(`${environment.server}/produtos`, categorias, this.token)
+}
 
-  putCategoria(categorias: Categorias): Observable<Categorias>{
-  return this.http.put<Categorias>('http://localhost:8080/categorias', categorias, this.token)
-  }
+putCategoria(categorias: Categorias): Observable<Categorias>{
+  return this.http.put<Categorias>(`${environment.server}/produtos`, categorias, this.token)
+}
 
-  deleteCategoria(id: number){
-  return this.http.delete(`http://localhost:8080/categorias/${id}`, this.token)
-  }
-  /* VAMOS PEGAR O TEMA RESPONSAVEL PELO ID */
-  getByIdCategoria(id: number): Observable<Categorias>{
-  return this.http.get<Categorias>(`http://localhost:8080/categorias/${id}`, this.token)
-  }
+deleteCategoria(id: number){
+  return this.http.delete(`${environment.server}/produtos/${id}`, this.token)
+}
+/* VAMOS PEGAR O TEMA RESPONSAVEL PELO ID */
+getByIdCategoria(id: number): Observable<Categorias>{
+  return this.http.get<Categorias>(`${environment.server}/produtos/${id}`, this.token)
+}
 
 }
