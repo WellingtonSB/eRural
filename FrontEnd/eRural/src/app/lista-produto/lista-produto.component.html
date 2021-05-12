@@ -19,10 +19,7 @@
                 <label></label>
                 <label>Quantidade: {{item.quantidade}}</label><br>
                 <label>Peso: {{item.peso}}</label>
-                <button class="btn btn-info mr-3" [routerLink]="['/editar-produto',produto.id]" >Editar</button>
-                <button>Deletar</button>
-               
-                <!-- <a  href="#">adicionar ao carrinho</a> -->
+                <a [routerLink]="['/produto-delete', item.id]" class="text-danger">Apagar</a>
             </div>
         </div>
     </div>

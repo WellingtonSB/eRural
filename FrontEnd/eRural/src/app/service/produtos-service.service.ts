@@ -27,11 +27,11 @@ export class ProdutoServiceService {
     return this.http.put<Produtos>(`${environment.server}/produtos`, produto, this.token)
   }
 
-  deleteProduto(id: number) {
+  deleteProdutos(id: number) {
     return this.http.delete(`${environment.server}/produtos/${id}`, this.token)
   }
   /* VAMOS PEGAR O TEMA RESPONSAVEL PELO ID */
-  getByIdProduto(id: number): Observable<Produtos> {
+  getByIdProdutos(id: number): Observable<Produtos> {
     return this.http.get<Produtos>(`${environment.server}/produtos/${id}`, this.token)
   }
 }
