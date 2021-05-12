@@ -21,16 +21,16 @@ export class ListaProdutoComponent implements OnInit {
   listaCategorias: Categorias[]
 
   constructor(
-    private router: Router,
-    private authService:AuthService,
+    public router: Router,
+    public authService:AuthService,
     private produtoService: ProdutoServiceService,
     private categoriaService: CategoriaService
   ){}
 
- 
+
   ngOnInit() {
     if(environment.token != ''){
-      this.findAllProduto() /* QUERO Q APAREÇA QUANDO A TELA INICIAR */ 
+      this.findAllProduto() /*QUERO Q APAREÇA QUANDO A TELA INICIAR*/
     }
     this.findAllProduto()
     this.findAllCategoria()

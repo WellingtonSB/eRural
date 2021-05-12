@@ -72,6 +72,4 @@ export class ProdutoProdutorComponent implements OnInit {
 
   }
 
-
-
 }
