@@ -2,10 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categorias } from 'src/app/model/Categorias';
 import { Produtos } from 'src/app/model/Produtos';
-import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
-import { ProdutoServiceService } from 'src/app/service/produto-service.service';
-import { environment } from 'src/environments/environment.prod';
+import { ProdutoServiceService } from 'src/app/service/produtos-service.service';
 
 @Component({
   selector: 'app-produto',
@@ -18,9 +16,11 @@ export class ProdutoComponent implements OnInit {
   idProduto:Produtos
   listaProdutos: Produtos[]
 
-  categoria:Categorias = new Categorias()
+  categorias:Categorias = new Categorias()
   listaCategorias: Categorias[]
-  
+  idCategoria: number
+  token = localStorage.getItem('token')
+
   constructor(
     private produtosService: ProdutoServiceService,
     private router:Router,
@@ -29,21 +29,32 @@ export class ProdutoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(environment.token ==''){
+    if (this.token == null) {
+      alert('Sua seção expirou, faça o login novamente')
       this.router.navigate(['/inicio'])
     }
+    window.scroll(0, 0)
     let id = this.route.snapshot.params['id']
+    this.idProduto = id
     this.findByIdProduto(id)
   }
 
   findByIdProduto(id:number){
-    this.produtosService.getByIdProduto(id).subscribe((resp:Produtos)=>{
+    this.produtosService.getByIdProdutos(id).subscribe((resp:Produtos)=>{
       this.produto = resp
     })
   }
 
-  atualizar(){
-    this.produtosService.putProduto(this.produto).subscribe((resp:Produtos)=>{
+  findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((response: Categorias) => {
+      this.categorias = response
+    });
+  }
+  
+  atualiza(){
+      /* this.categorias.id = this.idCategoria
+      this.produto.categorias = this.categorias */
+      this.produtosService.putProduto(this.produto).subscribe((resp:Produtos)=>{
       this.produto = resp
       alert('Produto atualizado com sucesso!')
       this.router.navigate(['/listaProdutos'])

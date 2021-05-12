@@ -7,7 +7,7 @@ import { Produtos } from '../model/Produtos';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
-import { ProdutoServiceService } from '../service/produto-service.service';
+import { ProdutoServiceService } from '../service/produtos-service.service';
 
 @Component({
   selector: 'app-produto-produtor',
@@ -16,11 +16,13 @@ import { ProdutoServiceService } from '../service/produto-service.service';
 })
 export class ProdutoProdutorComponent implements OnInit {
   produto: Produtos = new Produtos()
-
+  produtoUser: boolean = false
   idUser = environment.id
   categoria: Categorias = new Categorias()
   usuario: Usuario = new Usuario()
 
+  token = localStorage.getItem('token')
+  
   listaCategoria: Categorias[]
   listaProduto: Produtos[]
   idCategoria: number
@@ -34,18 +36,32 @@ export class ProdutoProdutorComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if (environment.token == '') {
+    if (this.token == null) {
       alert('Sua seção expirou, faça o login novamente')
       this.router.navigate(['/inicio'])
-
     }
     window.scroll(0, 0)
     this.findAllCategoria()
+    //this.findByIdUsuario()
+    this.findAllProdutos()
   }
 
   findAllCategoria() {
     this.catService.getAllCategoria().subscribe((resp: Categorias[]) => {
       this.listaCategoria = resp
+    })
+  }
+
+  findAllProdutos(){
+    this.prodService.getAllProduto().subscribe((resp: Produtos[])=>{
+      resp.forEach((item)=>{
+        if(item.usuario.id == this.idUser){
+          this.produtoUser = true
+        }else {
+          this.produtoUser = false
+        }
+      })
+
     })
   }
 
@@ -55,12 +71,19 @@ export class ProdutoProdutorComponent implements OnInit {
     })
   }
 
+  findByIdUsuario(){
+    this.auth.getByIdUSer(this.idUser).subscribe((resp: Usuario)=>{
+      this.usuario = resp
+
+    })
+  }
+
   postarProduto() {
     this.categoria.id = this.idCategoria
     this.produto.categorias = this.categoria
     this.usuario.id = this.idUser
     this.produto.usuario = this.usuario
-
+    console.log(this.produto)
     this.prodService.postProduto(this.produto).subscribe((resp: Produtos) => {
       this.produto = resp
       alert('Cadastrou com sucesso!')

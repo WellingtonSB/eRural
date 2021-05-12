@@ -11,6 +11,7 @@ import { UserLogin } from '../model/UserLogin';
 })
 export class AuthService {
 
+
   constructor( private http:HttpClient ) {}
 
   cadastro( user:Usuario):Observable<Usuario>{
@@ -22,13 +23,13 @@ export class AuthService {
     }
 
     getByIdUSer(id: number): Observable<Usuario>{
-      return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`)
+      return this.http.get<Usuario>(`${environment.server}/usuarios/${id}`)
     }
 
-    logado(){
-      let ok: boolean=false
-      if(environment.token != ''){
-        ok =true
+    logado (){
+      let ok: boolean = false
+      if(localStorage.getItem('token') != null) {
+        ok = true
       }
       return ok
     }
@@ -51,10 +52,12 @@ export class AuthService {
 
     administrador(){
       let ok: boolean =false
-      if(environment.tipo == 'administrador'){
+      if(environment.tipo == 'admin'){
         ok =true
       }
       return ok
     }
 
+
+ 
 }
