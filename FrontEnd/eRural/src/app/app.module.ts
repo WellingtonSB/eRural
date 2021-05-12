@@ -19,6 +19,7 @@ import { InicioProdutorComponent } from './inicio-produtor/inicio-produtor.compo
 import { InicioClienteComponent } from './inicio-cliente/inicio-cliente.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,12 +33,9 @@ import { InicioClienteComponent } from './inicio-cliente/inicio-cliente.componen
     AjudaComponent,
     InicioProdutorComponent,
     ListaProdutoComponent,
-<<<<<<< HEAD
-    ProdutoProdutorComponent
-=======
     ProdutoProdutorComponent,
-    InicioClienteComponent
->>>>>>> 59757d0ae6effb171150c5fad2e9576a18b5e537
+    InicioClienteComponent,
+    
    
   ],
   imports: [

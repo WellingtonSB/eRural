@@ -19,7 +19,7 @@ const routes: Routes = [
 {path: 'ajuda', component: AjudaComponent},
 { path: 'inicio-produtor',component:InicioProdutorComponent},
 { path: 'cadastro-produto', component:ProdutoProdutorComponent},
-{ path: 'inicio-cliente',component:InicioClienteComponent}
+{ path: 'inicio-cliente',component:InicioClienteComponent},
 ];
 
 @NgModule({

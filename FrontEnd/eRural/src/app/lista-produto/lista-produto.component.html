@@ -19,9 +19,8 @@
                 <label></label>
                 <label>Quantidade: {{item.quantidade}}</label><br>
                 <label>Peso: {{item.peso}}</label>
-                <button *ngIf='authService.produtor()== true'>Editar</button>
-                <button *ngIf='authService.produtor()== true'>Deletar</button>
-                <a *ngIf='authService.cliente()== true' href="#">adicionar ao carrinho</a>
+
+                <a [routerLink]="['/produto-delete', item.id]" class="text-danger">Apagar</a>
             </div>
         </div>
     </div>

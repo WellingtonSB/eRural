@@ -5,9 +5,5 @@ export const environment = {
   nome: '',
   id: 0,
   tipo: ''
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> 59757d0ae6effb171150c5fad2e9576a18b5e537
 };
