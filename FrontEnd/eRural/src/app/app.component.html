@@ -1,6 +1,10 @@
-<app-menu></app-menu>
+<!--app-menu></!--app-menu>
 <app-menu-cliente *ngIf='auth.logado() && auth.cliente()'></app-menu-cliente>
-<app-menu-produtor *ngIf='auth.logado() && auth.produtor()'></app-menu-produtor>
+<app-menu-produtor *ngIf='auth.logado() && auth.produtor()'></-app-menu-produtor>
 <router-outlet></router-outlet>
-<app-rodape *ngIf='auth.logado()'> </app-rodape>
+<app-rodape-- *ngIf='auth.logado()'> </app-rodape-->
+
+<app-menu-cliente></app-menu-cliente>
+<app-inicio-cliente></app-inicio-cliente>
+
 

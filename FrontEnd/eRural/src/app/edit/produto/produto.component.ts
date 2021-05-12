@@ -43,6 +43,12 @@ export class ProdutoComponent implements OnInit {
     })
   }
 
+  findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((response: Categorias) => {
+      this.categorias = response;
+    });
+  }
+
   atualiza(){
       this.categorias.id = this.idCategoria;
       this.produto.categorias = this.categorias;
