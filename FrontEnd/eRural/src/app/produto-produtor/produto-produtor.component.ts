@@ -34,14 +34,13 @@ export class ProdutoProdutorComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // Assim q a pag carregar barra de nav começar no inicio
-
-    /* if(environment.token == ''){
-      alert ('Sua seção expirou, faça o login novamente.')
+    if (environment.token == '') {
+      alert('Sua seção expirou, faça o login novamente')
       this.router.navigate(['/inicio'])
-    } */
-    this.findAllCategoria()
 
+    }
+    window.scroll(0, 0)
+    this.findAllCategoria()
   }
 
   findAllCategoria() {
