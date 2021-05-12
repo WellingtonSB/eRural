@@ -16,7 +16,7 @@ import org.hibernate.validator.constraints.URL;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "Categorias")
+@Table(name = "categorias")
 public class Categorias {
 
 	@Id
