@@ -21,6 +21,10 @@ export class AuthService {
       return this.http.post<UserLogin>(`${environment.server}/usuarios/logar`, userLogin)
     }
 
+    getByIdUSer(id: number): Observable<Usuario>{
+      return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`)
+    }
+
     logado(){
       let ok: boolean=false
       if(environment.token != ''){
@@ -40,6 +44,14 @@ export class AuthService {
     cliente(){
       let ok: boolean =false
       if(environment.tipo == 'cliente'){
+        ok =true
+      }
+      return ok
+    }
+
+    administrador(){
+      let ok: boolean =false
+      if(environment.tipo == 'administrador'){
         ok =true
       }
       return ok

@@ -1,7 +1,11 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
 import { AjudaComponent } from './ajuda/ajuda.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { ProdutoComponent } from './edit/produto/produto.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { InicialComponent } from './inicial/inicial.component';
 import { InicioClienteComponent } from './inicio-cliente/inicio-cliente.component';
 import { InicioProdutorComponent } from './inicio-produtor/inicio-produtor.component';
@@ -19,7 +23,12 @@ const routes: Routes = [
 {path: 'ajuda', component: AjudaComponent},
 { path: 'inicio-produtor',component:InicioProdutorComponent},
 { path: 'cadastro-produto', component:ProdutoProdutorComponent},
-{ path: 'inicio-cliente',component:InicioClienteComponent}
+{ path: 'inicio-cliente',component:InicioClienteComponent},
+{ path: 'editar-produto/:id',component: ProdutoComponent},
+{path: 'admin', component: AdminComponent},
+{path: 'categoria-edit/:id', component: CategoriaEditComponent},
+{path: 'categoria-delete/:id', component: CategoriaDeleteComponent}
+
 ];
 
 @NgModule({

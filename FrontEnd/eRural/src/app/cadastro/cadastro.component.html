@@ -27,7 +27,7 @@
                         <label for="email">E-mail</label>
                         <input [(ngModel)]='usuario.usuario' class="form-control" type="email" name="email" id="email"
                             placeholder="Informe seu melhor e-mail">
-                           
+
                     </div>
                     <!--/Email-->
 
@@ -53,6 +53,7 @@
                             <option>Selecione o tipo de usuario:</option>
                             <option value="produtor">Produtor</option>
                             <option value="cliente">Cliente</option>
+                            <option value="administrador">Administrador</option>
                         </select>
                     </div>
 
@@ -67,7 +68,7 @@
                         <!--Botao cadastrar-->
                         <button type="submit" class="btn btn-outline-success ml-4" (click)='cadastrar()'>
                             <i class="fa fa-check" aria-hidden="true"></i> Cadastrar</button>
-                           
+
                     <!--/Botao cadastrar-->
                 </div>
                 <!--/Botoes-->

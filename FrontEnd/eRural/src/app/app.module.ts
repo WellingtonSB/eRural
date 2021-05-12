@@ -17,6 +17,12 @@ import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
 import { ProdutoProdutorComponent } from './produto-produtor/produto-produtor.component';
 import { InicioProdutorComponent } from './inicio-produtor/inicio-produtor.component';
 import { InicioClienteComponent } from './inicio-cliente/inicio-cliente.component';
+import { ProdutoComponent } from './edit/produto/produto.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { AdminComponent } from './admin/admin.component';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+
 
 
 @NgModule({
@@ -33,7 +39,12 @@ import { InicioClienteComponent } from './inicio-cliente/inicio-cliente.componen
     InicioProdutorComponent,
     ListaProdutoComponent,
     ProdutoProdutorComponent,
-    InicioClienteComponent
+    InicioClienteComponent,
+    ProdutoComponent,
+    AdminComponent,
+    CategoriaEditComponent,
+    CategoriaDeleteComponent
+
    
   ],
   imports: [
@@ -43,7 +54,10 @@ import { InicioClienteComponent } from './inicio-cliente/inicio-cliente.componen
     FontAwesomeModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

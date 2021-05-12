@@ -27,14 +27,17 @@ export class ListaProdutoComponent implements OnInit {
     private categoriaService: CategoriaService
   ){}
 
-
   ngOnInit() {
-    if(environment.token != ''){
-      this.findAllProduto() /*QUERO Q APAREÇA QUANDO A TELA INICIAR*/
+    if (environment.token == '') {
+      alert('Sua seção expirou, faça o login novamente')
+      this.router.navigate(['/inicio'])
+
     }
+    window.scroll(0, 0)
     this.findAllProduto()
     this.findAllCategoria()
   }
+
   findAllProduto(){
     this.produtoService.getAllProduto().subscribe((resp: Produtos[])=>{
       this.listaProdutos = resp

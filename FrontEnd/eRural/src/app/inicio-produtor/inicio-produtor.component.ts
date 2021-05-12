@@ -14,11 +14,13 @@ export class InicioProdutorComponent implements OnInit {
   ){}
 
   ngOnInit() {
-    if(environment.token == ''){
-      this.router.navigate(['/entrar'])
+    if (environment.token == '') {
+      alert('Sua seção expirou, faça o login novamente')
+      this.router.navigate(['/inicio'])
+      window.scroll(0, 0)
     }
-    window.scroll(0, 0)
   }
+  
   sair(){
     this.router.navigate(['/entrar'])
     environment.token=''
