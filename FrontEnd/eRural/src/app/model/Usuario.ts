@@ -7,5 +7,5 @@ export class Usuario
     public usuario: string
     public tipoUsuario: string
     public senha: string
-    public produtos: Produtos[]
+    public produto: Produtos[]
 }
