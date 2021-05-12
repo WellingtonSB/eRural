@@ -57,4 +57,15 @@ export class AuthService {
       return ok
     }
 
+    mudarMenu(){
+    
+      let ok:boolean = true
+
+      if(window.document.URL == '/cadastro'){
+        ok = false
+      }
+      return ok
+  }
+
+
 }

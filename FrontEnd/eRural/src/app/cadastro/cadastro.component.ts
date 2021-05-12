@@ -22,9 +22,6 @@ export class CadastroComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(this.token == null){
-      this.router.navigate(['/inicio'])
-    }
     window.scroll(0, 0)
   }
 

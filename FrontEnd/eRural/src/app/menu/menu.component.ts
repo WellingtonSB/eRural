@@ -12,32 +12,32 @@ export class MenuComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private auth:AuthService
+    private auth: AuthService
   ) { }
 
   ngOnInit() {
     this.desce()
   }
 
-  desce(){
-    window.addEventListener("scroll", ()=>{ 
+  desce() {
+    window.addEventListener("scroll", () => {
       let header = document.querySelector('.header1');
-      if (header != null){
+      if (header != null) {
         header.classList.toggle("stick", window.scrollY > 0);
       }
-  })
-  } 
+    })
+  }
 
-  sair(){
+  sair() {
     this.router.navigate(['/login'])
     localStorage.removeItem('token') //environment.token = ''
     environment.id = 0
     environment.nome = ''
   }
 
-  menuAdm(){
-    let ok:boolean = false
-    if(this.auth.administrador() == true){
+  menuAdm() {
+    let ok: boolean = false
+    if (this.auth.administrador() == true) {
       ok = true
     }
     return ok
