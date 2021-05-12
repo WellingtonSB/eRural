@@ -50,8 +50,8 @@ export class ProdutoComponent implements OnInit {
   }
 
   atualiza(){
-      this.categorias.id = this.idCategoria;
-      this.produto.categorias = this.categorias;
+      /* this.categorias.id = this.idCategoria;
+      this.produto.categorias = this.categorias; */
 
       this.produtosService.putProduto(this.produto).subscribe((resp:Produtos)=>{
       this.produto = resp
