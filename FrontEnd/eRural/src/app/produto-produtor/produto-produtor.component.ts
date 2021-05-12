@@ -21,6 +21,8 @@ export class ProdutoProdutorComponent implements OnInit {
   categoria: Categorias = new Categorias()
   usuario: Usuario = new Usuario()
 
+  token = localStorage.getItem('token')
+  
   listaCategoria: Categorias[]
   listaProduto: Produtos[]
   idCategoria: number
@@ -34,10 +36,9 @@ export class ProdutoProdutorComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if (environment.token == '') {
+    if (this.token == null) {
       alert('Sua seção expirou, faça o login novamente')
       this.router.navigate(['/inicio'])
-
     }
     window.scroll(0, 0)
     this.findAllCategoria()

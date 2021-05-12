@@ -14,6 +14,7 @@ export class CadastroComponent implements OnInit {
   confirmarSenha: string
   tipo: string
 
+  token = localStorage.getItem('token')
   constructor(
     private route: ActivatedRoute,
     private authService: AuthService,
@@ -21,8 +22,8 @@ export class CadastroComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(environment.token == ''){
-      this.router.navigate(['/entrar'])
+    if(this.token == null){
+      this.router.navigate(['/inicio'])
     }
     window.scroll(0, 0)
   }

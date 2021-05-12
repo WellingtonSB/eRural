@@ -11,17 +11,20 @@
         <a class="nav-link ml-3" href="#"><img src="https://i.imgur.com/vEJY0PZ.png" alt="logo" width="120px"
             height="31px" class="img-fluid"> <span class="sr-only">(página atual)</span></a>
       </li>
-      <li class="nav-item active">
+      <li *ngIf='menuAdm()==false' class="nav-item active">
         <a class="nav-link mr-3 aling" routerLink='/inicio'>Início</a>
       </li>
-      <li class="nav-item active">
+      <li *ngIf='menuAdm()==false'class="nav-item active">
         <a class="nav-link mr-3 " routerLink='/ajuda'>Sobre</a>
       </li>
-      <li class="nav-item active">
+      <li *ngIf='menuAdm()==false'class="nav-item active">
         <a class="nav-link mr-3  " routerLink='/login'>Entrar</a>
       </li>
-      <li class="nav-item active">
+      <li *ngIf='menuAdm()==false'class="nav-item active">
         <a class="nav-link mr-3  " routerLink='/cadastro'>Cadastrar</a>
+      </li>
+      <li *ngIf='menuAdm()==true' class="nav-item active" >
+        <a class="nav-link mr-3  " routerLink='/admin'>Adminstrador</a>
       </li>
     </ul>
 

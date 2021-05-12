@@ -21,6 +21,7 @@ export class ProdutoComponent implements OnInit {
   categorias:Categorias = new Categorias()
   listaCategorias: Categorias[]
   idCategoria: number
+  token = localStorage.getItem('token')
 
   constructor(
     private produtosService: ProdutoServiceService,
@@ -30,9 +31,11 @@ export class ProdutoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(environment.token ==''){
+    if (this.token == null) {
+      alert('Sua seção expirou, faça o login novamente')
       this.router.navigate(['/inicio'])
     }
+    window.scroll(0, 0)
     let id = this.route.snapshot.params['id']
     this.findByIdProduto(id)
   }

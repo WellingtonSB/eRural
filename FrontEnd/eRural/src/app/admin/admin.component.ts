@@ -21,6 +21,7 @@ export class AdminComponent implements OnInit {
   categoria: Categorias = new Categorias()
   usuario: Usuario = new Usuario()
 
+  token = localStorage.getItem('token')
 
   listaCategoria: Categorias[]
   listaProduto: Produtos[]
@@ -29,19 +30,20 @@ export class AdminComponent implements OnInit {
   constructor(
     private router: Router,
     private auth: AuthService,
-    private catService: CategoriaService,
+    private categoriaService: CategoriaService,
   ) { }
 
   ngOnInit() {
+    if(this.token == null){
+      this.router.navigate(['/inicio'])
+    }
     window.scroll(0,0)
-
     this.findAllCategorias()
-
   }
 
 
   findAllCategorias(){
-    this.catService.getAllCategoria().subscribe((resp: Categorias[])=>{
+    this.categoriaService.getAllCategoria().subscribe((resp: Categorias[])=>{
       this.listaCategoria = resp
     })
   }
@@ -53,19 +55,20 @@ export class AdminComponent implements OnInit {
   }
 
   findByIdCategoria(){
-    this.catService.getByIdCategoria(this.idCategoria).subscribe((resp: Categorias)=>{
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categorias)=>{
       this.categoria = resp
     })
   }
 
   cadastrarCategoria(){
-    this.catService.postCategoria(this.categoria).subscribe((resp: Categorias)=>{
+    this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categorias)=>{
       this.categoria = resp
       alert('Categoria cadastrada com sucesso!')
       this.findAllCategorias()
-      this.categoria = new Categorias() //PARA ZERAR O CAMPO DE CATEGORIA APÓS CADASTRAR A CAT NOVA
+      this.categoria = new Categorias() //PARA ZERAR O CAMPO DE CATEGORIA APÓS CADASTRAR A CATEGORIA NOVA
     })
   }
-
-
 }
+
+
+

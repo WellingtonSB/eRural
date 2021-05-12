@@ -11,16 +11,20 @@ import { CategoriaService } from 'src/app/service/categoria.service';
 export class CategoriaEditComponent implements OnInit {
 
   categoria: Categorias = new Categorias()
-
+  token = localStorage.getItem('token')
+  
   constructor(
     private catService: CategoriaService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
-
+ 
   ngOnInit() {
+    if (this.token == null) {
+      alert('Sua seção expirou, faça o login novamente')
+      this.router.navigate(['/inicio'])
+    }
     window.scroll (0,0)
-
     let id = this.route.snapshot.params['id']
     this.findByIdTema(id)
   }
@@ -30,9 +34,7 @@ export class CategoriaEditComponent implements OnInit {
     this.catService.getByIdCategoria(id).subscribe((resp: Categorias)=> {
       this.categoria = resp
     })
-
   }
-
 
   atualizar(){
     this.catService.putCategoria(this.categoria).subscribe((resp: Categorias)=>{

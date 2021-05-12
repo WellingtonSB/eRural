@@ -17,30 +17,23 @@ export class MenuClienteComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
-    this.desce()
-
-  
+    this.desce() 
   }
 
-
 desce(){
-
   window.addEventListener("scroll", ()=>{ 
     let header = document.querySelector('.header1');
     if (header != null){
       header.classList.toggle("stick", window.scrollY > 0);
-    }
-    
+    } 
 })
   
 } 
 
 sair(){
   this.router.navigate(['/login'])
-  environment.token = ''
+  localStorage.removeItem('token') //environment.token = ''
   environment.id = 0
   environment.nome = ''
 }
-
 }

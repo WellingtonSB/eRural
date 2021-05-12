@@ -14,7 +14,7 @@ export class CategoriaService {
   ) { }
 
   token = {
-    headers: new HttpHeaders().set('Authorization', environment.token)
+    headers: new HttpHeaders().set('Authorization',localStorage.getItem('token') || '')
   }
 
   getAllCategoria(): Observable<Categorias[]>{

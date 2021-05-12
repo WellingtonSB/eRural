@@ -17,7 +17,6 @@ export class MenuProdutorComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
     this.desce()
   }
 
@@ -36,7 +35,7 @@ desce(){
 
 sair(){
   this.router.navigate(['/login'])
-  environment.token = ''
+  localStorage.removeItem('token') //environment.token = ''
   environment.id = 0
   environment.nome = ''
 }

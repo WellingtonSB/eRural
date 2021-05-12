@@ -11,9 +11,9 @@ export class ProdutoServiceService {
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) {}
 
-  token = { headers: new HttpHeaders().set('Authorization', environment.token) }
+  token = {  headers: new HttpHeaders().set('Authorization',localStorage.getItem('token') || '')}
 
   getAllProduto(): Observable<Produtos[]> {
     return this.http.get<Produtos[]>(`${environment.server}/produtos`, this.token)
