@@ -4,7 +4,7 @@ import { Categorias } from 'src/app/model/Categorias';
 import { Produtos } from 'src/app/model/Produtos';
 import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
-import { ProdutoServiceService } from 'src/app/service/produto-service.service';
+import { ProdutoServiceService } from 'src/app/service/produtos-service.service';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
@@ -20,7 +20,7 @@ export class ProdutoComponent implements OnInit {
 
   categoria:Categorias = new Categorias()
   listaCategorias: Categorias[]
-  
+
   constructor(
     private produtosService: ProdutoServiceService,
     private router:Router,
@@ -37,12 +37,12 @@ export class ProdutoComponent implements OnInit {
   }
 
   findByIdProduto(id:number){
-    this.produtosService.getByIdProduto(id).subscribe((resp:Produtos)=>{
+    this.produtosService.getByIdProdutos(id).subscribe((resp:Produtos)=>{
       this.produto = resp
     })
   }
 
-  atualizar(){
+  atualiza(){
     this.produtosService.putProduto(this.produto).subscribe((resp:Produtos)=>{
       this.produto = resp
       alert('Produto atualizado com sucesso!')

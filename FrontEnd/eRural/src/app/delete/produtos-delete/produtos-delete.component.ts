@@ -6,8 +6,8 @@ import { ProdutoServiceService } from 'src/app/service/produtos-service.service'
 import { environment } from 'src/environments/environment.prod';
 @Component({
   selector: 'app-produto-delete',
-  templateUrl: './produto-delete.component.html',
-  styleUrls: ['./produto-delete.component.css']
+  templateUrl: './produtos-delete.component.html',
+  styleUrls: ['./produtos-delete.component.css']
 })
 export class ProdutoDeleteComponent implements OnInit {
 
@@ -43,7 +43,7 @@ export class ProdutoDeleteComponent implements OnInit {
       alert('Produto apagado com sucesso!')
       this.router.navigate(['/listaProdutos'])
     })
-      
+
   }
 
 

@@ -12,6 +12,7 @@ import { InicioProdutorComponent } from './inicio-produtor/inicio-produtor.compo
 import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
 import { LoginComponent } from './login/login.component';
 import { ProdutoProdutorComponent } from './produto-produtor/produto-produtor.component';
+import { ProdutoDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
 
 const routes: Routes = [
 {path: "", redirectTo: 'inicio', pathMatch: 'full' },
@@ -25,6 +26,7 @@ const routes: Routes = [
 { path: 'cadastro-produto', component:ProdutoProdutorComponent},
 { path: 'inicio-cliente',component:InicioClienteComponent},
 { path: 'editar-produto/:id',component: ProdutoComponent},
+{ path: 'delete-produto/:id', component: ProdutoDeleteComponent},
 {path: 'admin', component: AdminComponent},
 {path: 'categoria-edit/:id', component: CategoriaEditComponent},
 {path: 'categoria-delete/:id', component: CategoriaDeleteComponent}

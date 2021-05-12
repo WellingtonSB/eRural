@@ -19,7 +19,10 @@
                 <label></label>
                 <label>Quantidade: {{item.quantidade}}</label><br>
                 <label>Peso: {{item.peso}}</label>
-                <a [routerLink]="['/produto-delete', item.id]" class="text-danger">Apagar</a>
+
+                <a class="text-info mr-3" [routerLink]="['/editar-produto', item.id]" >Editar</a>
+                  <a class="text-danger" [routerLink]="['/delete-produto', item.id]">Apagar</a>
+
             </div>
         </div>
     </div>
