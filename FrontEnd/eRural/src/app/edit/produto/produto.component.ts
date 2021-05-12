@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categorias } from 'src/app/model/Categorias';
 import { Produtos } from 'src/app/model/Produtos';
-import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { ProdutoServiceService } from 'src/app/service/produtos-service.service';
 import { environment } from 'src/environments/environment.prod';
@@ -33,7 +32,9 @@ export class ProdutoComponent implements OnInit {
     if(environment.token ==''){
       this.router.navigate(['/inicio'])
     }
+
     let id = this.route.snapshot.params['id']
+    this.idProduto = id
     this.findByIdProduto(id)
   }
 
@@ -45,15 +46,19 @@ export class ProdutoComponent implements OnInit {
 
   findByIdCategoria() {
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((response: Categorias) => {
-      this.categorias = response;
+      this.categorias = response
     });
   }
 
+
+
   atualiza(){
-      /* this.categorias.id = this.idCategoria;
-      this.produto.categorias = this.categorias; */
+
+      /* this.categorias.id = this.idCategoria
+      this.produto.categorias = this.categorias */
 
       this.produtosService.putProduto(this.produto).subscribe((resp:Produtos)=>{
+        alert(this.produto.nome+ "," +  this.produto.preco+ "," +  this.produto.peso+ "," +  this.produto.descricao+ "," +  this.produto.imagem+ "," +  this.produto.quantidade+ "," + this.produto.categorias.nome)
       this.produto = resp
       alert('Produto atualizado com sucesso!')
       this.router.navigate(['/listaProdutos'])
