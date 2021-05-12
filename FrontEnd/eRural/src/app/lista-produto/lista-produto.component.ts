@@ -31,10 +31,6 @@ export class ListaProdutoComponent implements OnInit {
     if (this.token == null) {
       alert('Sua seção expirou, faça o login novamente')
       this.router.navigate(['/inicio'])
-<<<<<<< HEAD
-
-=======
->>>>>>> 3cacc5709a817fb18ec1e379f1fbe2db95bf9ba4
     }
     window.scroll(0, 0)
     this.findAllProduto()
