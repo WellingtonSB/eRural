@@ -33,6 +33,15 @@ export class MenuComponent implements OnInit {
     localStorage.removeItem('token') //environment.token = ''
     environment.id = 0
     environment.nome = ''
+    this.mudarMenu()
+  }
+ 
+  mudarMenu(){
+    let ok: boolean = false
+    if(localStorage.getItem('token') != null) {
+      ok = true
+    }
+    return ok
   }
 
   menuAdm() {
@@ -41,5 +50,33 @@ export class MenuComponent implements OnInit {
       ok = true
     }
     return ok
+    
+  } 
+
+  menuCliente(){
+    let ok: boolean = false
+    if (this.auth.cliente() == true) {
+      ok = true
+    }
+    return ok
   }
+
+  menuProdutor(){
+    let ok: boolean = false
+    if (this.auth.produtor() == true) {
+      ok = true
+    }
+    return ok
+  }
+
+
+
 }
+
+
+
+
+
+
+
+

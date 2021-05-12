@@ -1,7 +1,3 @@
-<app-menu ></app-menu>
-<app-menu *ngIf='auth.logado() && auth.administrador()'></app-menu>
-<app-menu-cliente *ngIf='auth.logado() && auth.cliente()'></app-menu-cliente>
-<app-menu-produtor *ngIf='auth.logado() && auth.produtor()'></app-menu-produtor>
+<app-menu></app-menu>
 <router-outlet></router-outlet>
 <app-rodape *ngIf='auth.logado()'></app-rodape>
-

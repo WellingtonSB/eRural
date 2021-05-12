@@ -15,22 +15,21 @@ import { ProdutoProdutorComponent } from './produto-produtor/produto-produtor.co
 import { ProdutoDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
 
 const routes: Routes = [
-{path: "", redirectTo: 'inicio', pathMatch: 'full' },
+  { path: "", redirectTo: 'inicio', pathMatch: 'full' },
 
-{path: 'login', component: LoginComponent},
-{path: 'cadastro', component: CadastroComponent},
-{path: 'inicio', component: InicialComponent},
-{path: 'listaProdutos', component: ListaProdutoComponent},
-{path: 'ajuda', component: AjudaComponent},
-{ path: 'inicio-produtor',component:InicioProdutorComponent},
-{ path: 'cadastro-produto', component:ProdutoProdutorComponent},
-{ path: 'inicio-cliente',component:InicioClienteComponent},
-{ path: 'editar-produto/:id',component: ProdutoComponent},
-{ path: 'delete-produto/:id', component: ProdutoDeleteComponent},
-{path: 'admin', component: AdminComponent},
-{path: 'categoria-edit/:id', component: CategoriaEditComponent},
-{path: 'categoria-delete/:id', component: CategoriaDeleteComponent}
-
+  { path: 'login', component: LoginComponent },
+  { path: 'cadastro', component: CadastroComponent },
+  { path: 'inicio', component: InicialComponent },
+  { path: 'listaProdutos', component: ListaProdutoComponent },
+  { path: 'ajuda', component: AjudaComponent },
+  { path: 'inicio-produtor', component: InicioProdutorComponent },
+  { path: 'cadastro-produto', component: ProdutoProdutorComponent },
+  { path: 'inicio-cliente', component: InicioClienteComponent },
+  { path: 'editar-produto/:id', component: ProdutoComponent },
+  { path: 'delete-produto/:id', component: ProdutoDeleteComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'categoria-edit/:id', component: CategoriaEditComponent },
+  { path: 'categoria-delete/:id', component: CategoriaDeleteComponent }
 ];
 
 @NgModule({

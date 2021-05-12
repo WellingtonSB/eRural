@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -10,8 +10,6 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { InicialComponent } from './inicial/inicial.component';
 import { FormsModule } from '@angular/forms';
-import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
-import { MenuProdutorComponent } from './menu-produtor/menu-produtor.component';
 import { AjudaComponent } from './ajuda/ajuda.component';
 import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
 import { ProdutoProdutorComponent } from './produto-produtor/produto-produtor.component';
@@ -34,8 +32,6 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
     LoginComponent,
     CadastroComponent,
     InicialComponent,
-    MenuClienteComponent,
-    MenuProdutorComponent,
     AjudaComponent,
     InicioProdutorComponent,
     ListaProdutoComponent,

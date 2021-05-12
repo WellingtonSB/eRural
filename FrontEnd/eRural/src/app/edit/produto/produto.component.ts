@@ -50,22 +50,11 @@ export class ProdutoComponent implements OnInit {
       this.categorias = response
     });
   }
-
-
-
+  
   atualiza(){
-<<<<<<< HEAD
-
       /* this.categorias.id = this.idCategoria
       this.produto.categorias = this.categorias */
-
       this.produtosService.putProduto(this.produto).subscribe((resp:Produtos)=>{
-        alert(this.produto.nome+ "," +  this.produto.preco+ "," +  this.produto.peso+ "," +  this.produto.descricao+ "," +  this.produto.imagem+ "," +  this.produto.quantidade+ "," + this.produto.categorias.nome)
-=======
-    /*   this.categorias.id = this.idCategoria;
-      this.produto.categorias = this.categorias; */
-      this.produtosService.putProduto(this.produto).subscribe((resp: Produtos)=>{
->>>>>>> 3cb550b6155217333f63953460a487a1826eca87
       this.produto = resp
       alert('Produto atualizado com sucesso!')
       this.router.navigate(['/listaProdutos'])
