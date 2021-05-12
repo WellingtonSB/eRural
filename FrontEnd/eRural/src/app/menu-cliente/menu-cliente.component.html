@@ -6,23 +6,18 @@
     <div class="collapse navbar-collapse menuBar text-center m-auto" id="conteudoNavbarSuportado">
       <ul class="navbar-nav m-auto">
         <li class="nav-item active">
-          <a class="nav-link ml-3" href="#"><img src="https://i.imgur.com/vEJY0PZ.png" alt="logo" width="120px" height="31px" class="img-fluid"> <span class="sr-only">(página atual)</span></a>
+          <a class="nav-link mr-5" href="#"><img src="https://i.imgur.com/vEJY0PZ.png" alt="logo" width="120px" height="31px" class="img-fluid"> <span class="sr-only">(página atual)</span></a>
         </li>
 
-          <form class="form-inline ">
-              <div>
-                <input class="form-control mr-xl-2" style="min-width: 600px;" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-              </div>
-          </form>
+         
         
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle fontMenu mr-3 ml-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle fontMenu mr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Minha Conta
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item fontMenu" routerLink="">Cliente</a> <!--TELA DO FORMuLARIO DE DADOS DO CLIENTE-->
-            <a class="dropdown-item fontMenu" href="#">Me ajuda!</a> <!--PAG com as principais duvidas do cliente-->
+            <a class="dropdown-item fontMenu" href="#">Centaral de Ajuda</a> <!--PAG com as principais duvidas do cliente-->
             <a class="dropdown-item fontMenu" routerLink='/listaProdutos'>Produtos</a>
             <div class="dropdown-divider"></div>
         
@@ -30,17 +25,25 @@
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle fontMenu mr-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Meus Pedidos
+          <a class="nav-link dropdown-toggle fontMenu mr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Minhas Compras
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item fontMenu" href="#">Cancelados</a>
+            <a class="dropdown-item fontMenu" href="#">Compra Cancelada</a>
             <a class="dropdown-item fontMenu" href="#">a Receber</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item fontMenu" href="#">Concluidos</a>
+            <a class="dropdown-item fontMenu" href="#">Entregue</a>
           </div>
         </li>
-        <li class="nav-item">
+
+        <form class="form-inline ml-5 ">
+          <div>
+            <input class="form-control mr-xl-2" style="min-width: 400px;" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+          </div>
+      </form>
+
+        <li class="nav-item ml-5">
           <a class="nav-link" href="#"><img src="https://i.imgur.com/ePoMshG.png" alt="Cesta" width="27px" height="27px" class="img-fluid"></a>
         </li>
       </ul>
