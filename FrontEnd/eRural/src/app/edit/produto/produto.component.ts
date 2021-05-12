@@ -18,8 +18,9 @@ export class ProdutoComponent implements OnInit {
   idProduto:Produtos
   listaProdutos: Produtos[]
 
-  categoria:Categorias = new Categorias()
+  categorias:Categorias = new Categorias()
   listaCategorias: Categorias[]
+  idCategoria: number
 
   constructor(
     private produtosService: ProdutoServiceService,
@@ -43,7 +44,10 @@ export class ProdutoComponent implements OnInit {
   }
 
   atualiza(){
-    this.produtosService.putProduto(this.produto).subscribe((resp:Produtos)=>{
+      this.categorias.id = this.idCategoria;
+      this.produto.categorias = this.categorias;
+
+      this.produtosService.putProduto(this.produto).subscribe((resp:Produtos)=>{
       this.produto = resp
       alert('Produto atualizado com sucesso!')
       this.router.navigate(['/listaProdutos'])
