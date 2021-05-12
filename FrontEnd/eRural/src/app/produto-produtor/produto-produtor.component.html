@@ -53,6 +53,7 @@
                 <div class="card-body">
                   <div><img src='{{item.imagem}}' width="70" height="100"></div>
                   <h5 class="card-title m-0">{{item.nome}}</h5>
+                  <h3 class="card-title m-0">{{categoria.nome}}</h3>
                   <p class="card-text mt-3">{{item.descricao}}</p>
 
                   <a class="text-info mr-3" [routerLink]="['/editar-produto', item.id]">Editar</a>

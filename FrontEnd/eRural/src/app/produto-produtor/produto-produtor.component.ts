@@ -22,7 +22,7 @@ export class ProdutoProdutorComponent implements OnInit {
   usuario: Usuario = new Usuario()
 
   token = localStorage.getItem('token')
-  
+
   listaCategoria: Categorias[]
   listaProduto: Produtos[]
   idCategoria: number
@@ -72,9 +72,10 @@ export class ProdutoProdutorComponent implements OnInit {
   }
 
   findByIdUsuario(){
-    this.auth.getByIdUSer(this.idUser).subscribe((resp: Usuario)=>{
+      this.auth.getByIdUSer(this.idUser).subscribe((resp: Usuario)=>{
       this.usuario = resp
-
+      /* this.postarProduto() */
+      this.produto = new Produtos()
     })
   }
 
@@ -87,7 +88,7 @@ export class ProdutoProdutorComponent implements OnInit {
     this.prodService.postProduto(this.produto).subscribe((resp: Produtos) => {
       this.produto = resp
       alert('Cadastrou com sucesso!')
-      this.produto = new Produtos
+      this.produto = new Produtos()
       this.router.navigate(['/inicio-produtor'])
 
     })
