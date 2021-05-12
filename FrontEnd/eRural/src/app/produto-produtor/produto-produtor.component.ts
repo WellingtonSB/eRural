@@ -7,7 +7,7 @@ import { Produtos } from '../model/Produtos';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
-import { ProdutoServiceService } from '../service/produto-service.service';
+import { ProdutoServiceService } from '../service/produtos-service.service';
 
 @Component({
   selector: 'app-produto-produtor',
@@ -70,7 +70,5 @@ export class ProdutoProdutorComponent implements OnInit {
     })
 
   }
-
-
 
 }

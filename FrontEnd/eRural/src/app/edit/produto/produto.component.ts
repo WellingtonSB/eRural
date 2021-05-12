@@ -4,7 +4,7 @@ import { Categorias } from 'src/app/model/Categorias';
 import { Produtos } from 'src/app/model/Produtos';
 import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
-import { ProdutoServiceService } from 'src/app/service/produto-service.service';
+import { ProdutoServiceService } from 'src/app/service/produtos-service.service';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
@@ -18,9 +18,10 @@ export class ProdutoComponent implements OnInit {
   idProduto:Produtos
   listaProdutos: Produtos[]
 
-  categoria:Categorias = new Categorias()
+  categorias:Categorias = new Categorias()
   listaCategorias: Categorias[]
-  
+  idCategoria: number
+
   constructor(
     private produtosService: ProdutoServiceService,
     private router:Router,
@@ -37,13 +38,22 @@ export class ProdutoComponent implements OnInit {
   }
 
   findByIdProduto(id:number){
-    this.produtosService.getByIdProduto(id).subscribe((resp:Produtos)=>{
+    this.produtosService.getByIdProdutos(id).subscribe((resp:Produtos)=>{
       this.produto = resp
     })
   }
 
-  atualizar(){
-    this.produtosService.putProduto(this.produto).subscribe((resp:Produtos)=>{
+  findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((response: Categorias) => {
+      this.categorias = response;
+    });
+  }
+
+  atualiza(){
+      this.categorias.id = this.idCategoria;
+      this.produto.categorias = this.categorias;
+
+      this.produtosService.putProduto(this.produto).subscribe((resp:Produtos)=>{
       this.produto = resp
       alert('Produto atualizado com sucesso!')
       this.router.navigate(['/listaProdutos'])

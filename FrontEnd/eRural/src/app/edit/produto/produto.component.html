@@ -5,58 +5,50 @@
     </div>
   </div>
 
-  <div class="row d-flex justify-content-center">
-    <div class="col-md-6">
-      <div class="row d-flex align-itens-center mt-5">
-        <div class="col-md-6 d-flex mt-5">
-          <img height="550px" width="550px" src="https://i.imgur.com/CVFgLxf.jpg" alt="imagem de um caju">
+  <div class="row d-flex align-itens-center mt-5">
+
+    <div class="col-md-12">
+      <div id="formExemplo" data-toggle="validator" role="form">
+
+        <div class="form-group">
+          <label for="textNome" class="control-label">Nome</label>
+          <input [(ngModel)]='produto.nome' id="textNome" class="form-control" placeholder="Nome do Produto" type="text"
+            required>
         </div>
 
-        <div class="col-md-6">
-          <div id="formExemplo" data-toggle="validator" role="form">
+        <div class="form-group">
+          <label for="textQuantidade" class="control-label">Quantidade</label>
+          <input [(ngModel)]='produto.quantidade' id="textQuantidade" class="form-control"
+            placeholder="Digite a Quantidade" type="number" required>
+        </div>
 
-            <div class="form-group">
-              <label for="textNome" class="control-label">Nome</label>
-              <input [(ngModel)]='produto.nome' id="textNome" class="form-control" placeholder="Nome do Produto"
-                type="text" required>{{produto.nome}}
-            </div>
+        <div class="form-group">
+          <label for="textPeso" class="control-label">Peso</label>
+          <input [(ngModel)]='produto.peso' id="textPeso" class="form-control" placeholder="Digite o Peso" type="number"
+            required>
+        </div>
 
-            <div class="form-group">
-              <label for="textQuantidade" class="control-label">Quantidade</label>
-              <input [(ngModel)]='produto.quantidade' id="textQuantidade" class="form-control"
-                placeholder="Digite a Quantidade" type="number" required>{{produto.quantidade}}
-            </div>
+        <div class="form-group">
+          <label for="textPreco" class="control-label">Preço</label>
+          <input [(ngModel)]='produto.preco' id="textPreco" class="form-control" placeholder="Digite o Preço"
+            type="number" required>
+        </div>
 
-            <div class="form-group">
-              <label for="textPeso" class="control-label">Peso</label>
-              <input [(ngModel)]='produto.peso' id="textPeso" class="form-control" placeholder="Digite o Peso"
-                type="number" required>{{produto.peso}}
-            </div>
+        <div class="form-group">
+          <label for="textLink" class="control-label">Link</label>  
+          <input [(ngModel)]='produto.imagem' id="textLink" class="form-control"
+            placeholder="Cole o link da imagem aqui" type="text" required>
+        </div>
 
-            <div class="form-group">
-              <label for="textPreço" class="control-label">Preço</label>
-              <input [(ngModel)]='produto.preco' id="textPreço" class="form-control" placeholder="Digite o Preço"
-                type="number" required>{{produto.preco}}
-            </div>
+        <div class="form-group">
+          <label for="textLink" class="control-label">Descrição</label>
+          <input [(ngModel)]='produto.descricao' id="textLink" class="form-control" placeholder="Descrição produto"
+            type="text" required>
+        </div>
 
-            <div class="form-group">
-              <label for="textLink" class="control-label">Link</label>
-              <input [(ngModel)]='produto.imagem' id="textLink" class="form-control"
-                placeholder="Cole o link da imagem aqui" type="text" required>{{produto.imagem}}
-            </div>
-
-            <div class="form-group">
-              <label for="textLink" class="control-label">Descrição</label>
-              <input [(ngModel)]='produto.descricao' id="textLink" class="form-control" placeholder="Descrição produto"
-                type="text" required>{{produto.descricao}}
-            </div>
-
-            <div class="d-flex justify-content-center mb-5 mt-5">
-              <button type="submit" class="btn btn-outline-danger mr-4" routerLink="/login">Cancelar</button>
-              <button type="submit" class="btn btn-success" (click)='atualizar()'>Atualizar</button>
-            </div>
-
-          </div>
+        <div class="d-flex justify-content-center mb-5 mt-5">
+          <button type="submit" class="btn btn-outline-danger mr-4" routerLink="/listaProdutos">Cancelar</button>
+          <button type="submit" class="btn btn-success" (click)='atualiza()'>Atualizar</button>
         </div>
       </div>
     </div>

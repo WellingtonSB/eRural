@@ -5,7 +5,7 @@ import { Categorias } from '../model/Categorias';
 import { Produtos } from '../model/Produtos';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
-import { ProdutoServiceService } from '../service/produto-service.service';
+import { ProdutoServiceService } from '../service/produtos-service.service';
 
 @Component({
   selector: 'app-lista-produto',
@@ -21,8 +21,8 @@ export class ListaProdutoComponent implements OnInit {
   listaCategorias: Categorias[]
 
   constructor(
-    private router: Router,
-    private authService:AuthService,
+    public router: Router,
+    public authService:AuthService,
     private produtoService: ProdutoServiceService,
     private categoriaService: CategoriaService
   ){}
@@ -31,7 +31,7 @@ export class ListaProdutoComponent implements OnInit {
     if (environment.token == '') {
       alert('Sua seção expirou, faça o login novamente')
       this.router.navigate(['/inicio'])
-      
+
     }
     window.scroll(0, 0)
     this.findAllProduto()

@@ -6,7 +6,7 @@ import { Produtos } from '../model/Produtos';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
-import { ProdutoServiceService } from '../service/produto-service.service';
+import { ProdutoServiceService } from '../service/produtos-service.service';
 
 @Component({
   selector: 'app-admin',
@@ -30,14 +30,13 @@ export class AdminComponent implements OnInit {
     private router: Router,
     private auth: AuthService,
     private catService: CategoriaService,
-    private prodService: ProdutoServiceService
   ) { }
 
   ngOnInit() {
     window.scroll(0,0)
 
     this.findAllCategorias()
-    
+
   }
 
 
