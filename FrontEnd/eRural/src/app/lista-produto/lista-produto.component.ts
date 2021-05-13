@@ -16,25 +16,27 @@ export class ListaProdutoComponent implements OnInit {
 
   produto: Produtos = new Produtos()
   listaProdutos: Produtos[]
-
+  token = localStorage.getItem('token')
   categoria:Categorias = new Categorias()
   listaCategorias: Categorias[]
 
   constructor(
-    private router: Router,
-    private authService:AuthService,
+    public router: Router,
+    public authService:AuthService,
     private produtoService: ProdutoServiceService,
     private categoriaService: CategoriaService
   ){}
 
- 
   ngOnInit() {
-    if(environment.token != ''){
-      this.findAllProduto() /* QUERO Q APAREÇA QUANDO A TELA INICIAR */ 
+    if (this.token == null) {
+      alert('Sua seção expirou, faça o login novamente')
+      this.router.navigate(['/inicio'])
     }
+    window.scroll(0, 0)
     this.findAllProduto()
     this.findAllCategoria()
   }
+
   findAllProduto(){
     this.produtoService.getAllProduto().subscribe((resp: Produtos[])=>{
       this.listaProdutos = resp

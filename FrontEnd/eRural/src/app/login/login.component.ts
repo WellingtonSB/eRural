@@ -27,18 +27,22 @@ export class LoginComponent implements OnInit {
     this.auth.entrar(this.userLogin).subscribe((resp: UserLogin)=>{
       this.userLogin = resp
 
-      environment.token = this.userLogin.token
+     
       environment.id = this.userLogin.id
       environment.nome = this.userLogin.nome
       environment.tipo = this.userLogin.tipoUsuario
-      
+      localStorage.setItem('token',this.userLogin.token) //environment.token = this.userLogin.token
+
       if(this.userLogin.tipoUsuario == 'produtor'){
         this.router.navigate(['/inicio-produtor'])
       }
       if(this.userLogin.tipoUsuario == 'cliente'){
         this.router.navigate(['/inicio-cliente'])
       }
-      
+      if(this.userLogin.tipoUsuario == 'admin'){
+        this.router.navigate(['/admin'])
+      }
+
     }, erro=>{
       if(erro.status == 500){
         alert('usuario ou senha incorreto!')

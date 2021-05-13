@@ -15,7 +15,7 @@ import org.hibernate.validator.constraints.URL;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "Produtos")
+@Table(name = "produtos")
 public class Produtos {
 
 	@Id
@@ -42,7 +42,7 @@ public class Produtos {
 	private Categorias categorias;
 
 	@ManyToOne
-	@JsonIgnoreProperties("produtos")
+	@JsonIgnoreProperties("produto")
 	private Usuario usuario;
 	
 	

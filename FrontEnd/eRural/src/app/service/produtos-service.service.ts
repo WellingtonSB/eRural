@@ -11,12 +11,16 @@ export class ProdutoServiceService {
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) {}
 
-  token = { headers: new HttpHeaders().set('Authorization', environment.token) }
+  token = {  headers: new HttpHeaders().set('Authorization',localStorage.getItem('token') || '')}
 
   getAllProduto(): Observable<Produtos[]> {
     return this.http.get<Produtos[]>(`${environment.server}/produtos`, this.token)
+  }
+
+  getByIdProdutos(id: number): Observable<Produtos> {
+    return this.http.get<Produtos>(`${environment.server}/produtos/${id}`, this.token)
   }
 
   postProduto(produto: Produtos): Observable<Produtos> {
@@ -30,8 +34,5 @@ export class ProdutoServiceService {
   deleteProdutos(id: number) {
     return this.http.delete(`${environment.server}/produtos/${id}`, this.token)
   }
-  /* VAMOS PEGAR O TEMA RESPONSAVEL PELO ID */
-  getByIdProdutos(id: number): Observable<Produtos> {
-    return this.http.get<Produtos>(`${environment.server}/produtos/${id}`, this.token)
-  }
+
 }
