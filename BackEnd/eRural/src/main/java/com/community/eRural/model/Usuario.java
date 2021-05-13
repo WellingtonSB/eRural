@@ -42,17 +42,11 @@ public class Usuario {
 	private String senha;
 
 	
-<<<<<<< HEAD
-	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-	@JsonIgnoreProperties("usuario")
-	private List<Produtos> produtos;
-=======
 
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List<Produtos> produto;
 
->>>>>>> 59757d0ae6effb171150c5fad2e9576a18b5e537
 	
 	
 	public long getId() {
@@ -99,13 +93,8 @@ public class Usuario {
 		return produto;
 	}
 
-<<<<<<< HEAD
-	 void setProdutos(List<Produtos> produtos) {
-		this.produtos = produtos;
-=======
 	public void setProduto(List<Produtos> produto) {
 		this.produto = produto;
->>>>>>> 59757d0ae6effb171150c5fad2e9576a18b5e537
 	}
 	
 }
