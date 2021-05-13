@@ -2,12 +2,15 @@
 
   <div class="row mt-5">
     <div class="col-md-3 justify-content-center mt-5">
-      <a (click)='findAllProduto()'>TODOS</a>
+
       <h5>Categorias</h5>
       <ul class="list-group list-group-flush">
         <a *ngFor='let cat of listaCategorias' (click)='filtrarCategoria(cat.nome)'>
-          <li class="list-group-item">{{cat.nome}}</li>
+          <li class="listaLateral list-group-item">{{cat.nome}}</li>
         </a>
+        <a></a>
+        <li class="listaLateral list-group-item" (click)='findAllProduto()'>Todas</li>
+
       </ul>
     </div>
 
@@ -19,7 +22,9 @@
             <img class="img img-fluid" src="{{item.imagem}}">
           </div>
           <div class="details">
-            <h2>{{item.nome}}<br><span>Categoria:</span></h2>
+
+            <h2>{{item.nome}}<br><span>Categoria: {{cat.nome}}</span></h2>
+
             <div class="preco">{{item.preco}}</div>
             <label class="label">Disponivel: {{item.quantidade}} itens</label>
             <label class="label">Peso: {{item.peso}}</label>
@@ -42,7 +47,9 @@
             <img class="img img-fluid" src="{{item.imagem}}">
           </div>
           <div class="details">
-            <h2>{{item.nome}}<br><span>Categoria:</span></h2>
+
+            <h2>{{item.nome}}<br><span>Categoria: {{item.categorias.nome}}</span></h2>
+
             <div class="preco">{{item.preco}}</div>
             <label class="label">Disponivel: {{item.quantidade}} itens</label>
             <label class="label">Peso: {{item.peso}}</label>

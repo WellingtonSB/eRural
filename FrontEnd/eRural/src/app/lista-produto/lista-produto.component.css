@@ -106,3 +106,11 @@ a{
   background-color: rgb(199, 80, 0);
 }
 
+.listaLateral{
+  background-color: rgba(185, 185, 185, 0.25);
+}
+.listaLateral:hover{
+  background-color: rgba(110, 110, 110, 0.25);
+}
+
+
