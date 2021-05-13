@@ -46,18 +46,17 @@ export class ProdutoComponent implements OnInit {
   }
 
   findByIdCategoria() {
-    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((response: Categorias) => {
-      this.categorias = response
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categorias) => {
+      this.categorias = resp
     });
   }
-  
+
   atualiza(){
-      /* this.categorias.id = this.idCategoria
-      this.produto.categorias = this.categorias */
+
       this.produtosService.putProduto(this.produto).subscribe((resp:Produtos)=>{
       this.produto = resp
       alert('Produto atualizado com sucesso!')
-      this.router.navigate(['/listaProdutos'])
+      this.router.navigate(['/cadastro-produto'])
     })
   }
 

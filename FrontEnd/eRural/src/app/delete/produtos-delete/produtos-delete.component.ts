@@ -2,6 +2,7 @@ import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produtos } from 'src/app/model/Produtos';
+import { AuthService } from 'src/app/service/auth.service';
 import { ProdutoServiceService } from 'src/app/service/produtos-service.service';
 import { environment } from 'src/environments/environment.prod';
 @Component({
@@ -19,7 +20,8 @@ export class ProdutoDeleteComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private produtosService: ProdutoServiceService
+    private produtosService: ProdutoServiceService,
+    private auth: AuthService
   ) { }
 
   ngOnInit() {
@@ -41,7 +43,12 @@ export class ProdutoDeleteComponent implements OnInit {
   apagar() {
     this.produtosService.deleteProdutos(this.idPost).subscribe(() => {
       alert('Produto apagado com sucesso!')
-      this.router.navigate(['/listaProdutos'])
+      if(this.auth.administrador() == true){
+        this.router.navigate(['/admin'])
+      }else{
+        this.router.navigate(['/cadastro-produto'])
+      }
+
     })
 
   }
