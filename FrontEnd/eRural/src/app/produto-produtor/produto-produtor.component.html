@@ -7,7 +7,9 @@
           <h3>Aqui você cria, edita e deleta seus Produtos</h3>
         </div>
         <div class="col-md-6">
+
           <img class="img-fluid" src="https://i.imgur.com/kL1eOUb.png" alt="">
+
         </div>
       </div>
       <!--MENU-->
@@ -35,6 +37,7 @@
           <div class="tab-pane fade show active" id="todosProdutos" role="tabpanel"
             aria-labelledby="nav-todasPostagens-tab">
             <!--LISTA CATEGORIAS-->
+
             <div *ngFor='let item of listaCategoria'>
             <div class="product card mr-3 mt-5 ml-3 mb-5" >
               <div class="imgbox">
@@ -43,7 +46,6 @@
               <div class="details">
                 <h5 class="card-title m-0">{{item.nome}}</h5>
                 <p class="card-text mt-3">{{item.descricao}}</p>
-
               </div>
             </div>
           </div>
@@ -51,6 +53,7 @@
           </div>
           <div class="tab-pane fade" id="Produtos" role="tabpanel">
             <!--LISTA PRODUTO DO PRODUTOR-->
+
             <div class="product card mr-3 mt-5 ml-3 mb-5" *ngFor='let item of usuario.produto'>
               <div class="imgbox">
                 <img class="img img-fluid" src='{{item.imagem}}'>
@@ -62,6 +65,7 @@
                 <label class="label">Peso: {{item.peso}}</label>
                 <a class="card1" [routerLink]="['/editar-produto', item.id]">Editar</a>
                 <a class="card2" [routerLink]="['/delete-produto', item.id]">Apagar</a>
+
               </div>
             </div>
             <!--/LISTA PRODUTO DO PRODUTOR-->

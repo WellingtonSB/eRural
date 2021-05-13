@@ -10,6 +10,7 @@
         </a>
         <a></a>
         <li class="listaLateral list-group-item" (click)='findAllProduto()'>Todas</li>
+
       </ul>
     </div>
 
@@ -21,7 +22,9 @@
             <img class="img img-fluid" src="{{item.imagem}}">
           </div>
           <div class="details">
+
             <h2>{{item.nome}}<br><span>Categoria: {{cat.nome}}</span></h2>
+
             <div class="preco">{{item.preco}}</div>
             <label class="label">Disponivel: {{item.quantidade}} itens</label>
             <label class="label">Peso: {{item.peso}}</label>
@@ -44,7 +47,9 @@
             <img class="img img-fluid" src="{{item.imagem}}">
           </div>
           <div class="details">
+
             <h2>{{item.nome}}<br><span>Categoria: {{item.categorias.nome}}</span></h2>
+
             <div class="preco">{{item.preco}}</div>
             <label class="label">Disponivel: {{item.quantidade}} itens</label>
             <label class="label">Peso: {{item.peso}}</label>
