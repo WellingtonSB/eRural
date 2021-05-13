@@ -1,29 +1,59 @@
 <div class="container mt-5">
 
-    <div class="row mt-5">
-        <div class="col-md-3 justify-content-center">
-            <div *ngFor='let cat of listaCategorias'class="mt-2 ml-5 d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
-                <div *ngFor='let prod of listaProdutos' class="mt-1 ml-5 d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
-                {{cat.nome}}
-                {{prod.nome}}
-            </div>
-        </div>
-        </div>
-        <div *ngFor='let item of listaProdutos' class="product card mr-3 mt-5 ml-3 mb-2">
-            <div class="imgbox">
-                <img src="{{item.imagem}}">
-            </div>
-            <div class="details">
-                <h2>{{item.nome}}<br><span>{{item.categorias}}</span></h2>
-                <div class="preco">{{item.preco}}</div>
-                <label></label>
-                <label>Quantidade: {{item.quantidade}}</label><br>
-                <label>Peso: {{item.peso}}</label>
-
-                <a class="text-info mr-3">Comprar Agora</a> <!--ADICIONAR ROTA FAKE-->
-                  <a class="text-danger">Adicionar ao Carrinho</a> <!--ADD ROTA FAKE-->
-
-            </div>
-        </div>
+  <div class="row mt-5">
+    <div class="col-md-3 justify-content-center mt-5">
+      <a (click)='findAllProduto()'>TODOS</a>
+      <h5>Categorias</h5>
+      <ul class="list-group list-group-flush">
+        <a *ngFor='let cat of listaCategorias' (click)='filtrarCategoria(cat.nome)'>
+          <li class="list-group-item">{{cat.nome}}</li>
+        </a>
+      </ul>
     </div>
+
+    <div class="col-md-9" *ngIf='filterOff == false'>
+      <div class="row" *ngFor='let cat of listaCategoria'>
+
+        <div *ngFor='let item of cat.produtos' class="product card mb-3 mr-3 mt-5 ml-3 mb-2">
+          <div class="imgbox">
+            <img class="img img-fluid" src="{{item.imagem}}">
+          </div>
+          <div class="details">
+            <h2>{{item.nome}}<br><span>Categoria:</span></h2>
+            <div class="preco">{{item.preco}}</div>
+            <label class="label">Disponivel: {{item.quantidade}} itens</label>
+            <label class="label">Peso: {{item.peso}}</label>
+
+            <a class="a">Comprar Agora</a>
+            <!--ADICIONAR ROTA FAKE-->
+            <a class="carrinho" routerLink='/inicio-produtor' id='i'>Adicionar ao Carrinho</a>
+            <!--ADD ROTA FAKE-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-9" *ngIf='filterOff'>
+      <div class="row">
+
+        <div *ngFor='let item of listaProdutos' class="product card mb-3 mr-3 mt-5 ml-3 mb-2">
+          <div class="imgbox">
+            <img class="img img-fluid" src="{{item.imagem}}">
+          </div>
+          <div class="details">
+            <h2>{{item.nome}}<br><span>Categoria:</span></h2>
+            <div class="preco">{{item.preco}}</div>
+            <label class="label">Disponivel: {{item.quantidade}} itens</label>
+            <label class="label">Peso: {{item.peso}}</label>
+
+            <a class="a">Comprar Agora</a>
+            <!--ADICIONAR ROTA FAKE-->
+            <a class="carrinho" routerLink='/inicio-produtor' id='i'>Adicionar ao Carrinho</a>
+            <!--ADD ROTA FAKE-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

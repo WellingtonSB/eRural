@@ -24,6 +24,7 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
     ProdutoComponent,
     AdminComponent,
     CategoriaEditComponent,
-    CategoriaDeleteComponent
+    CategoriaDeleteComponent,
+
 
 
   ],

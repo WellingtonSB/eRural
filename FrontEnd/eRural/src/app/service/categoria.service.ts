@@ -37,4 +37,15 @@ getByIdCategoria(id: number): Observable<Categorias>{
   return this.http.get<Categorias>(`${environment.server}/categorias/${id}`, this.token)
 }
 
+getByNomeCategoria(nome: string): Observable<Categorias[]>{
+  return this.http.get<Categorias[]>(`${environment.server}/categorias/nome/${nome}`, this.token)
+}
+
+  filtrarCategorias(){
+    if(environment.catFilter == ''){
+
+    }
+
+  }
+
 }
