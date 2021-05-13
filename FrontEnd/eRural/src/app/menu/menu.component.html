@@ -26,13 +26,14 @@
       <li *ngIf='mudarMenu()==false' class="nav-item active">
         <a class="nav-link mr-3  " routerLink='/cadastro'>Cadastrar</a>
       </li>
+      <!--Home-->
+
       <li *ngIf='menuAdm()==true' class="nav-item active">
         <a class="nav-link mr-3  " routerLink='/admin'>Adminstrador</a>
       </li>
-      <!--Home-->
+     
 
       <!--Cliente-->
-
       <li  *ngIf='menuCliente()==true' class="nav-item dropdown">
         <a class="nav-link dropdown-toggle fontMenu mr-3 ml-5" href="#" id="navbarDropdown" role="button"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,21 +50,20 @@
       <!--Cliente-->
 
       <!--Produtor -->
-    <li  *ngIf='menuProdutor()==true' class="nav-item dropdown">
+    <li *ngIf='menuProdutor()==true' class="nav-item dropdown">
       <a class="nav-link dropdown-toggle fontMenu mr-3 ml-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Minha conta
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <a class="dropdown-item fontMenu" routerLink='/cadastro-produto'>Cadastrar Produto</a>
-        <a class="dropdown-item fontMenu" routerLink='/listaProdutos'>Produtos</a>
         <a class="dropdown-item fontMenu" (click)='sair()'>Sair</a>
       </div>
+    </li>
        <!--Produtor -->
-
+       
     </ul>
 
     <div class="collapse navbar-collapse menuBar  justify-content-end">
-
       <ul class="align-items-center justify-content-end">
         <form class="form-inline">
           <div>
@@ -73,8 +73,6 @@
           </div>
         </form>
       </ul>
-
     </div>
-
   </div>
 </nav>

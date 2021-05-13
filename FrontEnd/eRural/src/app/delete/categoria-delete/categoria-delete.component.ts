@@ -42,5 +42,6 @@ export class CategoriaDeleteComponent implements OnInit {
       this.categoria = resp
     })
   }
+
 }
 
