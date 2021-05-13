@@ -1,12 +1,8 @@
 <div class="mt-5">
-
   <div class="row mt-5 mb-5 text-center justify-content-center">
     <div class="container mt-5">
-
-
       <h1>Bem-vindo(a) Produtor(a)</h1>
       <h3>Aqui você cria, edita e deleta seus Produtos</h3>
-
       <!--MENU-->
       <div class="container" id="postagens">
         <!--NAV-->
@@ -18,7 +14,8 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" id="produtos" data-toggle="tab" href="#Produtos" role="tab"
-                aria-controls="nav-categoriaProdutos-tab" aria-selected="false" (click)='findByIdUsuario()'>Seus Produtos</a>
+                aria-controls="nav-categoriaProdutos-tab" aria-selected="false" (click)='findByIdUsuario()'>Seus
+                Produtos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="cadastro" data-toggle="tab" href="#Cadastrar" role="tab"
@@ -27,20 +24,16 @@
           </ul>
         </nav>
         <!--/NAV-->
-
-
         <div class="tab-content texto" id="nav-tabContent">
           <div class="tab-pane fade show active" id="todosProdutos" role="tabpanel"
             aria-labelledby="nav-todasPostagens-tab">
-          <!--LISTA CATEGORIAS-->
+            <!--LISTA CATEGORIAS-->
             <div class="card-columns">
               <div class="card text-center m-2" *ngFor='let item of listaCategoria'>
                 <div class="card-body">
                   <div><img src='{{item.imagem}}' width="70" height="100"></div>
                   <h5 class="card-title m-0">{{item.nome}}</h5>
                   <p class="card-text mt-3">{{item.descricao}}</p>
-
-
                 </div>
               </div>
             </div>
