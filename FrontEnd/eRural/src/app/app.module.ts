@@ -20,6 +20,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AdminComponent } from './admin/admin.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { AreaProdutorComponent } from './area-produtor/area-produtor.component';
 
 
 
@@ -42,6 +43,7 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
     AdminComponent,
     CategoriaEditComponent,
     CategoriaDeleteComponent,
+    AreaProdutorComponent,
 
 
 
