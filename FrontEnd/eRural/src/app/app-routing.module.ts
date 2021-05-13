@@ -30,8 +30,7 @@ const routes: Routes = [
   { path: 'delete-produto/:id', component: ProdutoDeleteComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'categoria-edit/:id', component: CategoriaEditComponent },
-  { path: 'categoria-delete/:id', component: CategoriaDeleteComponent },
-
+  { path: 'categoria-delete/:id', component: CategoriaDeleteComponent }
 ];
 
 @NgModule({
