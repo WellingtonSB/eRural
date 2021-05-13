@@ -16,6 +16,7 @@ import { ProdutoDeleteComponent } from './delete/produtos-delete/produtos-delete
 import { AreaProdutorComponent } from './area-produtor/area-produtor.component';
 
 
+
 const routes: Routes = [
   { path: "", redirectTo: 'inicio', pathMatch: 'full' },
 

@@ -26,6 +26,7 @@ import { AreaProdutorComponent } from './area-produtor/area-produtor.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

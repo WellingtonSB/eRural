@@ -1,61 +1,48 @@
 <nav class="header1 navbar navbar-expand-lg navbar-light menuBar">
-
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
     aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse menuBar align-items-center text-center m-auto" id="conteudoNavbarSuportado">
     <ul class="navbar-nav">
-
       <li class="nav-item active">
         <a class="nav-link ml-3" href="#"><img src="https://i.imgur.com/vEJY0PZ.png" alt="logo" width="120px"
             height="31px" class="img-fluid"> <span class="sr-only">(página atual)</span></a>
       </li>
-
-
-
-        <ul class="align-items-center justify-content-center">
-          <form class="form-inline">
-            <div>
-              <input class="form-control mr-xl-2 ml-5" style="min-width: 60px;" type="search" placeholder="Pesquisar"
-                aria-label="Pesquisar">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-            </div>
-          </form>
-        </ul>
-
-
-
-
+      <ul class="align-items-center justify-content-center">
+        <form class="form-inline">
+          <div>
+            <input class="form-control mr-xl-2 ml-5" style="min-width: 60px;" type="search" placeholder="Pesquisar"
+              aria-label="Pesquisar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+          </div>
+        </form>
+      </ul>
 
       <!--Home-->
-        <div class="d-flex justify-content-center">
-          <ul class=" navbar-nav mr-auto">
-            <li *ngIf='mudarMenu()==false' class="nav-item active ">
-              <a class="nav-link mr-3 aling" routerLink='/inicio'>Início</a>
-            </li>
-            <li *ngIf='mudarMenu()==false ' class="nav-item active">
-              <a class="nav-link mr-3 " routerLink='/ajuda'>Sobre</a>
-            </li>
-            <li *ngIf='mudarMenu()==false' class="nav-item active">
-              <a class="nav-link mr-3  " routerLink='/login'>Entrar</a>
-            </li>
-            <li *ngIf='mudarMenu()==false' class="nav-item active">
-              <a class="nav-link mr-3  " routerLink='/cadastro'>Cadastrar</a>
-            </li>
-            <li *ngIf='menuAdm()==true' class="nav-item active">
-              <a class="nav-link mr-3  " routerLink='/admin'>Adminstrador</a>
-            </li>
-            </ul>
-        </div>
-
-
+      <div class="d-flex justify-content-center">
+        <ul class=" navbar-nav mr-auto">
+          <li *ngIf='mudarMenu()==false' class="nav-item active ">
+            <a class="nav-link mr-3 aling" routerLink='/inicio'>Início</a>
+          </li>
+          <li *ngIf='mudarMenu()==false ' class="nav-item active">
+            <a class="nav-link mr-3 " routerLink='/ajuda'>Sobre</a>
+          </li>
+          <li *ngIf='mudarMenu()==false' class="nav-item active">
+            <a class="nav-link mr-3  " routerLink='/login'>Entrar</a>
+          </li>
+          <li *ngIf='mudarMenu()==false' class="nav-item active">
+            <a class="nav-link mr-3  " routerLink='/cadastro'>Cadastrar</a>
+          </li>
+          <li *ngIf='menuAdm()==true' class="nav-item active">
+            <a class="nav-link mr-3  " routerLink='/admin'>Adminstrador</a>
+          </li>
+        </ul>
+      </div>
       <!--Home-->
 
       <!--Cliente-->
-
-      <li  *ngIf='menuCliente()==true' class="nav-item dropdown">
+      <li *ngIf='menuCliente()==true' class="nav-item dropdown">
         <a class="nav-link dropdown-toggle fontMenu mr-3 ml-5" href="#" id="navbarDropdown" role="button"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Minha Conta
@@ -70,21 +57,35 @@
       <!--Cliente-->
 
       <!--Produtor -->
-    <li  *ngIf='menuProdutor()==true' class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle fontMenu mr-3 ml-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Minha conta
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item fontMenu" routerLink='/cadastro-produto'>Cadastrar Produto</a>
-        <a class="dropdown-item fontMenu" routerLink='/minha-conta'>Produtos</a>
-        <a class="dropdown-item fontMenu" (click)='sair()'>Sair</a>
-      </div>
+      <li *ngIf='menuProdutor()==true' class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle fontMenu mr-3 ml-5" href="#" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Minha conta
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item fontMenu" routerLink='/cadastro-produto'>Cadastrar Produto</a>
+          <a class="dropdown-item fontMenu" routerLink='/minha-conta'>Produtos</a>
+          <a class="dropdown-item fontMenu" (click)='sair()'>Sair</a>
+        </div>
       </li>
-       <!--Produtor -->
+      <!--Produtor -->
 
+
+
+
+
+      <!--Produtor -->
+      <li *ngIf='menuProdutor()==true' class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle fontMenu mr-3 ml-5" href="#" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Minha conta
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item fontMenu" routerLink='/cadastro-produto'>Cadastrar Produto</a>
+          <a class="dropdown-item fontMenu" (click)='sair()'>Sair</a>
+        </div>
+      </li>
+      <!--Produtor -->
     </ul>
-
-
-
   </div>
 </nav>

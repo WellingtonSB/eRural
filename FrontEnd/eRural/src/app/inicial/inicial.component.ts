@@ -19,3 +19,4 @@ export class InicialComponent implements OnInit {
     }
     
 }
+
