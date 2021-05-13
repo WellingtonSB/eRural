@@ -1,3 +1,4 @@
+import { AlertasService } from './../service/alertas.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -18,7 +19,8 @@ export class CadastroComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -42,13 +44,13 @@ export class CadastroComponent implements OnInit {
       this.authService.cadastro(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
         this.router.navigate(['/login'])
-        alert('Usuário cadastrado com sucesso!')
+        this.alertas.showAlertSuccess('Usuário cadastrado com sucesso!')
       }, erro => {
         if (erro.status == 500) {
-          alert('Email invalido!')
+          this.alertas.showAlertDanger('Email invalido!')
         }
         if(erro.status == 400){
-          alert('Email já cadastrado')
+          this.alertas.showAlertDanger('Email já cadastrado')
         }
       })
     }

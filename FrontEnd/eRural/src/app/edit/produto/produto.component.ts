@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categorias } from 'src/app/model/Categorias';
 import { Produtos } from 'src/app/model/Produtos';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { ProdutoServiceService } from 'src/app/service/produtos-service.service';
 
@@ -25,12 +26,13 @@ export class ProdutoComponent implements OnInit {
     private produtosService: ProdutoServiceService,
     private router:Router,
     private route:ActivatedRoute,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
     if (this.token == null) {
-      alert('Sua seção expirou, faça o login novamente')
+      this.alertas.showAlertDanger('Sua seção expirou, faça o login novamente')
       this.router.navigate(['/inicio'])
     }
     window.scroll(0, 0)
@@ -55,7 +57,7 @@ export class ProdutoComponent implements OnInit {
 
       this.produtosService.putProduto(this.produto).subscribe((resp:Produtos)=>{
       this.produto = resp
-      alert('Produto atualizado com sucesso!')
+      this.alertas.showAlertSuccess('Produto atualizado com sucesso!')
       this.router.navigate(['/cadastro-produto'])
     })
   }

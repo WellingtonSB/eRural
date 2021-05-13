@@ -1,3 +1,4 @@
+import { AlertasService } from './../service/alertas.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -32,7 +33,8 @@ export class ProdutoProdutorComponent implements OnInit {
     private router: Router,
     private auth: AuthService,
     private catService: CategoriaService,
-    private prodService: ProdutoServiceService
+    private prodService: ProdutoServiceService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -87,7 +89,7 @@ export class ProdutoProdutorComponent implements OnInit {
     console.log(this.produto)
     this.prodService.postProduto(this.produto).subscribe((resp: Produtos) => {
       this.produto = resp
-      alert('Cadastrou com sucesso!')
+      this.alertas.showAlertSuccess('Cadastro realizado com sucesso!')
       this.produto = new Produtos()
       this.router.navigate(['/inicio-produtor'])
 
