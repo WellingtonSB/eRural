@@ -1,4 +1,4 @@
-<nav class="header1 navbar navbar-expand-lg navbar-light menuBar">
+<nav class="header1 navbar navbar-expand-md navbar-light menuBar ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
         aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
@@ -9,8 +9,6 @@
                 <a class="nav-link ml-3" href="#"><img src="https://i.imgur.com/vEJY0PZ.png" alt="logo" width="120px"
                         height="31px" class="img-fluid"> <span class="sr-only">(página atual)</span></a>
             </li>
-
-            <!-- foi -->
             <!--Home-->
             <div class="d-flex justify-content-center">
                 <ul class=" menu navbar-nav mr-auto align-items-center">
@@ -61,7 +59,7 @@
                 </div>
             </li>
             <!--Produtor -->
-            
+
             <!--Cliente-->
             <li *ngIf='menuCliente()==true'
                 class=" menuCliente nav-item dropdown align-items-center justify-content-center">
@@ -91,9 +89,7 @@
                     <a class="dropdown-item fontMenu" (click)='sair()'>Sair</a>
                 </div>
             </li>
-
             <!-- Adm -->
-
         </ul>
     </div>
 </nav>

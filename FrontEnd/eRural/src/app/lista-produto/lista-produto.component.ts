@@ -1,3 +1,4 @@
+import { AlertasService } from './../service/alertas.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -26,12 +27,13 @@ export class ListaProdutoComponent implements OnInit {
     public router: Router,
     public authService:AuthService,
     private produtoService: ProdutoServiceService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private alertas: AlertasService
   ){}
 
   ngOnInit() {
     if (this.token == null) {
-      alert('Sua seção expirou, faça o login novamente')
+      this.alertas.showAlertDanger('Sua seção expirou, faça o login novamente')
       this.router.navigate(['/inicio'])
     }
     window.scroll(0, 0)

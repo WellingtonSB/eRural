@@ -13,6 +13,8 @@ import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
 import { LoginComponent } from './login/login.component';
 import { ProdutoProdutorComponent } from './produto-produtor/produto-produtor.component';
 import { ProdutoDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
+import { AreaProdutorComponent } from './area-produtor/area-produtor.component';
+
 
 
 const routes: Routes = [
@@ -30,7 +32,10 @@ const routes: Routes = [
   { path: 'delete-produto/:id', component: ProdutoDeleteComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'categoria-edit/:id', component: CategoriaEditComponent },
-  { path: 'categoria-delete/:id', component: CategoriaDeleteComponent }
+  { path: 'categoria-delete/:id', component: CategoriaDeleteComponent },
+  { path: 'categoria-delete/:id', component: CategoriaDeleteComponent },
+  { path: 'minha-conta', component: AreaProdutorComponent}
+
 ];
 
 @NgModule({
