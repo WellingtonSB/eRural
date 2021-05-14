@@ -1,3 +1,9 @@
+
+@import url('http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
 .img-round {
   width: 80%;
   height: 80%;
@@ -12,7 +18,7 @@
 .product
 {
 	width: 240px;
-	height: 340px;
+  height: 420px;
 	background: #fff;
 	box-shadow: 0 5px 15px rgba(0,0,0,.25);
 	border-radius: 5px;
@@ -20,7 +26,6 @@
 
 .product .imgbox
 {
-	height: 100%;
 	box-sizing: border-box;
 }
 
@@ -28,7 +33,7 @@
 {
 	display: block;
 	width:90%;
-	margin:20px auto 0;
+  background-size: cover;
 }
 
 .details
@@ -108,3 +113,14 @@
 	color: #fff;
 	background: #470000;
 }
+.nav-link
+{
+  color:rgb(255, 255, 255);
+  background-color: rgb(110, 179, 0);
+}
+.nav-link:hover{
+  color:rgb(255, 255, 255);
+  background-color: rgba(131, 179, 0, 0.877);
+}
+
+

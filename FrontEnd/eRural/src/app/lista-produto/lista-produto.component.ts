@@ -20,6 +20,8 @@ export class ListaProdutoComponent implements OnInit {
   token = localStorage.getItem('token')
   categoria:Categorias = new Categorias()
   listaCategorias: Categorias[]
+  listaCategoria: Categorias[]
+  filterOff: boolean = true
 
   constructor(
     public router: Router,
@@ -35,13 +37,18 @@ export class ListaProdutoComponent implements OnInit {
       this.router.navigate(['/inicio'])
     }
     window.scroll(0, 0)
-    this.findAllProduto()
+    if(this.filterOff){
+      this.findAllProduto()
+    }
+
     this.findAllCategoria()
+
   }
 
   findAllProduto(){
     this.produtoService.getAllProduto().subscribe((resp: Produtos[])=>{
       this.listaProdutos = resp
+      this.filterOff = true
 
     })
   }
@@ -52,6 +59,13 @@ export class ListaProdutoComponent implements OnInit {
     })
   }
 
+  filtrarCategoria(nome: string){
+
+      this.categoriaService.getByNomeCategoria(nome).subscribe((resp:Categorias[])=>{
+        this.listaCategoria = resp
+        this.filterOff = false
+      })
+  }
 
 
 }

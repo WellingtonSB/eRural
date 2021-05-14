@@ -1,24 +1,30 @@
 .product
 {
-	
+
 	width: 240px;
-	height: 340px;
+	height: 420px;
 	background: #fff;
 	box-shadow: 0 5px 15px rgba(0,0,0,.25);
 	border-radius: 5px;
 }
 
+a{
+  cursor: pointer;
+}
+
 .product .imgbox
 {
-	height: 100%;
+
 	box-sizing: border-box;
 }
 
-.product .imgbox img
+
+
+.product .imgbox .img
 {
 	display: block;
 	width:90%;
-	margin:20px auto 0;
+  background-size: cover;
 }
 
 .details
@@ -54,10 +60,10 @@
 	top:10px;
 	right:20px;
 	font-weight: bold;
-	color: #ff4faf;
+	color: #2c8a00;
 }
 
-label
+.label
 {
 	display: block;
 	margin-top: 5px;
@@ -65,61 +71,46 @@ label
 	font-size: 14px
 }
 
-ul
-{
-	display: flex;
-	margin-top:0;
-	padding:0;
-}
-ul li
-{
-	list-style: none;
-	margin:5px 5px 0;
-	font-size: 12px;
-	font-weight: normal;
-	color: #ccc;
-}
-ul li:first-child
-{
-	margin-left: 0;
-}
-
-ul.colors li
-{
-	width: 16px;
-	height: 16px;	
-}
-
-ul.colors li:nth-child(1)
-{
-	background: black;
-}
-
-ul.colors li:nth-child(2)
-{
-	background: black;
-}
-
-ul.colors li:nth-child(3)
-{
-	background: black;
-}
-
-a
+.a
 {
 	display: block;
 	padding: 5px;
 	color: #fff;
 	margin: 15px 0 0;
-	background: #ff4faf;
+	background: #41a300;
 	text-align: center;
 	text-decoration: none;
 	transition: .3s;
 	cursor: pointer;
 }
 
-a:hover
+.a:hover
 {
 	color: #fff;
-	background: #ff209a;
+	background: #1e6900;
 }
+
+.carrinho{
+  display: block;
+	padding: 5px;
+	color: #fff;
+	margin: 15px 0 0;
+	background: rgb(238, 95, 0);
+	text-align: center;
+	text-decoration: none;
+	transition: .3s;
+	cursor: pointer;
+}
+.carrinho:hover{
+  color: #fff;
+  background-color: rgb(199, 80, 0);
+}
+
+.listaLateral{
+  background-color: rgba(185, 185, 185, 0.25);
+}
+.listaLateral:hover{
+  background-color: rgba(110, 110, 110, 0.25);
+}
+
+

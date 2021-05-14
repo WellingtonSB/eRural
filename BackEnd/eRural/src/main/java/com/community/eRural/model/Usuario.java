@@ -41,11 +41,19 @@ public class Usuario {
 	@Size(min = 5, max = 100)
 	private String senha;
 
+<<<<<<< HEAD
+	
+=======
 
+>>>>>>> 798d0549e034077ce818dc27201f2f7ab86f3df0
 
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List<Produtos> produto;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 798d0549e034077ce818dc27201f2f7ab86f3df0
 	
 	
 	public long getId() {
@@ -94,7 +102,10 @@ public class Usuario {
 
 	public void setProduto(List<Produtos> produto) {
 		this.produto = produto;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 798d0549e034077ce818dc27201f2f7ab86f3df0
 	}
 	
 }

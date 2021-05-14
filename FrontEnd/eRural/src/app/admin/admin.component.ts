@@ -37,7 +37,7 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
     if(this.token == null){
-      this.router.navigate(['/inicio'])
+      this.router.navigate(['/home'])
     }
     window.scroll(0,0)
     this.findAllCategorias()
