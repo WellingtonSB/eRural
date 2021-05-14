@@ -38,36 +38,41 @@
             aria-labelledby="nav-todasPostagens-tab">
             <!--LISTA CATEGORIAS-->
 
-            <div *ngFor='let item of listaCategoria'>
-            <div class="product card mr-3 mt-5 ml-3 mb-5" >
-              <div class="imgbox">
-                <img class="img-fluid" src='{{item.imagem}}'>
-              </div>
-              <div class="details">
-                <h5 class="card-title m-0">{{item.nome}}</h5>
-                <p class="card-text mt-3">{{item.descricao}}</p>
+            <div class="card-columns" >
+              <div class="card text-center m-2" *ngFor='let item of listaCategoria'>
+                <div class="card-body">
+                  <div class="display-inline"><img src='{{item.imagem}}' width="70" height="120"></div>
+                  <h5 class="card-title m-0">{{item.nome}}</h5>
+                  <p class="card-text mt-3">{{item.descricao}}</p>
+                </div>
               </div>
             </div>
-          </div>
             <!--/LISTA CATEGORIAS-->
           </div>
+
           <div class="tab-pane fade" id="Produtos" role="tabpanel">
             <!--LISTA PRODUTO DO PRODUTOR-->
 
-            <div class="product card mr-3 mt-5 ml-3 mb-5" *ngFor='let item of usuario.produto'>
-              <div class="imgbox">
-                <img class="img img-fluid" src='{{item.imagem}}'>
-              </div>
-              <div class="details">
-                <p class="card-text m-auto">Categoria: {{item.categorias.nome}}</p>
-                <h5 class="card-title m-auto">{{item.nome}}</h5><span class="preco"> Preço: {{item.preco}}</span>
-                <p class="card-text m-auto">{{item.descricao}}</p>
-                <label class="label">Peso: {{item.peso}}</label>
-                <a class="card1" [routerLink]="['/editar-produto', item.id]">Editar</a>
-                <a class="card2" [routerLink]="['/delete-produto', item.id]">Apagar</a>
+            <div class="card-columns" >
+              <div class="card text-center m-2" *ngFor='let item of usuario.produto'>
+                <div class="card-body">
+                  <div class="display-inline img-fluid"><img src='{{item.imagem}}' width="70" height="120"></div>
+                  <p class="card-text m-auto">Categoria: {{item.categorias.nome}}</p>
+                  <h5 class="card-title m-auto">{{item.nome}}</h5><span class="preco"> Preço: {{item.preco}}</span>
+                  <p class="card-text m-auto">{{item.descricao}}</p>
+                  <label class="label">Peso: {{item.peso}}</label>
+                  <a class="card1" [routerLink]="['/editar-produto', item.id]">Editar</a>
+                  <a class="card2" [routerLink]="['/delete-produto', item.id]">Apagar</a>
 
+                </div>
               </div>
             </div>
+
+            <!--
+              <div class="details">
+
+              </div>
+            </div> -->
             <!--/LISTA PRODUTO DO PRODUTOR-->
           </div>
 

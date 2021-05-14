@@ -82,3 +82,10 @@
 	color: #fff;
 	background-color: #313131;
 }
+.jumbotron{
+  height: 395px;
+}
+.jumbotronBackground{
+  background-color: rgb(107, 205, 50);
+  color: black;
+  }
