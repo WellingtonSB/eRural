@@ -34,7 +34,7 @@
     justify-content: space-between;
     align-items: center;
     transition: 0.06s;
-
+    
 }
 .headerLogo{
     position: relative;
@@ -43,7 +43,7 @@
 }
 
 .header1{
-
+    
         background-color: #397900;
         transition: 0.06s;
         z-index: 1;
