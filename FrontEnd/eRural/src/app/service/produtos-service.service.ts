@@ -23,6 +23,10 @@ export class ProdutoServiceService {
     return this.http.get<Produtos>(`${environment.server}/produtos/${id}`, this.token)
   }
 
+  getByNomeProduto(nome: string): Observable<Produtos[]> {
+    return this.http.get<Produtos[]>(`${environment.server}/produtos/nome/${nome}`, this.token)
+  }
+
   postProduto(produto: Produtos): Observable<Produtos> {
     return this.http.post<Produtos>(`${environment.server}/produtos`, produto, this.token)
   }

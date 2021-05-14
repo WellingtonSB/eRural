@@ -28,6 +28,10 @@ export class AdminComponent implements OnInit {
   listaProduto: Produtos[]
   idCategoria: number
 
+  key = 'data'
+  reverse = true
+
+
   constructor(
     private router: Router,
     private auth: AuthService,

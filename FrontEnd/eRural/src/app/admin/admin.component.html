@@ -33,10 +33,29 @@
           <div class="tab-pane fade show active" id="todasCategorias" role="tabpanel"
             aria-labelledby="nav-todasPostagens-tab">
 
-            <div class="card-columns">
-              <div class="card text-center m-2" *ngFor='let item of listaCategoria'>
-                <div class="card-body">
-                  <div class="display-inline img-fluid"><img src='{{item.imagem}}' width="70" height="120"></div>
+            <div class="product card mr-3 mt-5 ml-3 mb-5" *ngFor='let item of listaCategoria | orderBy: key : reverse'>
+              <div class="imgbox">
+                <img src='{{item.imagem}}'>
+              </div>
+              <div class="details">
+                <h5 class="card-title m-0">{{item.nome}}</h5>
+                <p class="card-text mt-3">{{item.descricao}}</p>
+                <a class="card1" [routerLink]="['/categoria-edit', item.id]">Editar</a>
+                <a class="card2" [routerLink]="['/categoria-delete', item.id]">Apagar</a>
+              </div>
+            </div>
+            <!--/TODASCATEGORIAS-->
+
+          </div>
+          <div class="tab-pane fade show active" id="categoriaProdutos" role="tabpanel">
+
+            <div class="product card mr-3 mt-5 ml-3 mb-5" *ngFor='let categoria of listaCategoria'>
+              <div *ngFor='let item of categoria.produtos | orderBy: key: reverse'>
+                <div class="imgbox">
+                  <img src='{{item.imagem}}'>
+                </div>
+                <div class="details">
+
                   <h5 class="card-title m-0">{{item.nome}}</h5>
                   <p class="card-text mt-3">{{item.descricao}}</p>
                   <a class="card1" [routerLink]="['/categoria-edit', item.id]">Editar</a>

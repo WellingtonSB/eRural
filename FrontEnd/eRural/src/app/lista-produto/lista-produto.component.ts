@@ -23,6 +23,9 @@ export class ListaProdutoComponent implements OnInit {
   listaCategoria: Categorias[]
   filterOff: boolean = true
 
+  key = 'data'
+  reverse = true
+
   constructor(
     public router: Router,
     public authService:AuthService,

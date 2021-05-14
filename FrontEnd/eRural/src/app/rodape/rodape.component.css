@@ -1,4 +1,7 @@
 /* STYLE INFORMAÇÕES DE CONTATO*/
+
+
+
 ul.contato {
     list-style: none;
     padding: 0;
@@ -102,5 +105,7 @@ ul.social-network li{
 .copyrigth p{
   text-align: center;
   color: #fff;
+  padding: 0;
+  margin: 0;
 }
 /* /STYLE  COPYRIGHT */

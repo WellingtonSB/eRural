@@ -16,6 +16,7 @@ export class InicioClienteComponent implements OnInit {
     private alertas: AlertasService
   ) { }
 
+
   ngOnInit() {
     window.scroll(0,0)
     if (this.token == null) {
