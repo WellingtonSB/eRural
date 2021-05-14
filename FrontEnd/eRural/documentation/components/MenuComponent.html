@@ -1,0 +1,857 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>e-rural documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">e-rural documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>MenuComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/menu/menu.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-menu</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./menu.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./menu.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#desce">desce</a>
+                            </li>
+                            <li>
+                                <a href="#menuAdm">menuAdm</a>
+                            </li>
+                            <li>
+                                <a href="#menuCliente">menuCliente</a>
+                            </li>
+                            <li>
+                                <a href="#menuProdutor">menuProdutor</a>
+                            </li>
+                            <li>
+                                <a href="#mudarMenu">mudarMenu</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#sair">sair</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, auth: <a href="../injectables/AuthService.html">AuthService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/menu/menu.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>auth</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="desce"></a>
+                    <span class="name">
+                        <b>
+                            desce
+                        </b>
+                        <a href="#desce"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>desce()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/menu/menu.component.ts:22</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="menuAdm"></a>
+                    <span class="name">
+                        <b>
+                            menuAdm
+                        </b>
+                        <a href="#menuAdm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>menuAdm()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/menu/menu.component.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="menuCliente"></a>
+                    <span class="name">
+                        <b>
+                            menuCliente
+                        </b>
+                        <a href="#menuCliente"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>menuCliente()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/menu/menu.component.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="menuProdutor"></a>
+                    <span class="name">
+                        <b>
+                            menuProdutor
+                        </b>
+                        <a href="#menuProdutor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>menuProdutor()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/menu/menu.component.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mudarMenu"></a>
+                    <span class="name">
+                        <b>
+                            mudarMenu
+                        </b>
+                        <a href="#mudarMenu"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>mudarMenu()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/menu/menu.component.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="18"
+                            class="link-to-prism">src/app/menu/menu.component.ts:18</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sair"></a>
+                    <span class="name">
+                        <b>
+                            sair
+                        </b>
+                        <a href="#sair"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>sair()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/menu/menu.component.ts:31</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { environment } from &#x27;src/environments/environment.prod&#x27;;
+import { AuthService } from &#x27;../service/auth.service&#x27;;
+
+@Component({
+  selector: &#x27;app-menu&#x27;,
+  templateUrl: &#x27;./menu.component.html&#x27;,
+  styleUrls: [&#x27;./menu.component.css&#x27;]
+})
+export class MenuComponent implements OnInit {
+
+  constructor(
+    private router: Router,
+    private auth: AuthService
+  ) { }
+
+  ngOnInit() {
+    this.desce()
+  }
+
+  desce() {
+    window.addEventListener(&quot;scroll&quot;, () &#x3D;&gt; {
+      let header &#x3D; document.querySelector(&#x27;.header1&#x27;);
+      if (header !&#x3D; null) {
+        header.classList.toggle(&quot;stick&quot;, window.scrollY &gt; 0);
+      }
+    })
+  }
+
+  sair() {
+    this.router.navigate([&#x27;/login&#x27;])
+    localStorage.removeItem(&#x27;token&#x27;) //environment.token &#x3D; &#x27;&#x27;
+    environment.id &#x3D; 0
+    environment.nome &#x3D; &#x27;&#x27;
+    this.mudarMenu()
+  }
+ 
+  mudarMenu(){
+    let ok: boolean &#x3D; false
+    if(localStorage.getItem(&#x27;token&#x27;) !&#x3D; null) {
+      ok &#x3D; true
+    }
+    return ok
+  }
+
+  menuAdm() {
+    let ok: boolean &#x3D; false
+    if (this.auth.administrador() &#x3D;&#x3D; true) {
+      ok &#x3D; true
+    }
+    return ok
+    
+  } 
+
+  menuCliente(){
+    let ok: boolean &#x3D; false
+    if (this.auth.cliente() &#x3D;&#x3D; true) {
+      ok &#x3D; true
+    }
+    return ok
+  }
+
+  menuProdutor(){
+    let ok: boolean &#x3D; false
+    if (this.auth.produtor() &#x3D;&#x3D; true) {
+      ok &#x3D; true
+    }
+    return ok
+  }
+
+
+
+}
+
+
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;nav class&#x3D;&quot;header1 navbar navbar-expand-lg navbar-light menuBar&quot;&gt;
+
+  &lt;button class&#x3D;&quot;navbar-toggler&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#conteudoNavbarSuportado&quot;
+    aria-controls&#x3D;&quot;conteudoNavbarSuportado&quot; aria-expanded&#x3D;&quot;false&quot; aria-label&#x3D;&quot;Alterna navegação&quot;&gt;
+    &lt;span class&#x3D;&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;div class&#x3D;&quot;collapse navbar-collapse menuBar align-items-center text-center m-auto&quot; id&#x3D;&quot;conteudoNavbarSuportado&quot;&gt;
+    &lt;ul class&#x3D;&quot;navbar-nav&quot;&gt;
+      &lt;li class&#x3D;&quot;nav-item active&quot;&gt;
+        &lt;a class&#x3D;&quot;nav-link ml-3&quot; href&#x3D;&quot;#&quot;&gt;&lt;img src&#x3D;&quot;https://i.imgur.com/vEJY0PZ.png&quot; alt&#x3D;&quot;logo&quot; width&#x3D;&quot;120px&quot;
+            height&#x3D;&quot;31px&quot; class&#x3D;&quot;img-fluid&quot;&gt; &lt;span class&#x3D;&quot;sr-only&quot;&gt;(página atual)&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+
+      &lt;!-- foi --&gt;
+      &lt;!--Home--&gt;
+      &lt;div class&#x3D;&quot;d-flex justify-content-center&quot;&gt;
+        &lt;ul class&#x3D;&quot; menu navbar-nav mr-auto align-items-center&quot;&gt;
+
+          &lt;li *ngIf&#x3D;&#x27;mudarMenu()&#x3D;&#x3D;false&#x27; class&#x3D;&quot;nav-item active text-center&quot;&gt;
+            &lt;a class&#x3D;&quot;nav-link ml-5 mr-3 aling&quot; routerLink&#x3D;&#x27;/inicio&#x27;&gt;
+              &lt;strong _ngcontent-pfo-c35&#x3D;&quot;&quot;&gt;Inicio&lt;/strong&gt;&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li *ngIf&#x3D;&#x27;mudarMenu()&#x3D;&#x3D;false &#x27; class&#x3D;&quot; nav-item active&quot;&gt;
+            &lt;a class&#x3D;&quot;nav-link mr-3 &quot; routerLink&#x3D;&#x27;/ajuda&#x27;&gt;
+              &lt;strong _ngcontent-pfo-c35&#x3D;&quot;&quot;&gt;Sobre&lt;/strong&gt; &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;!--Home--&gt;
+      &lt;p class&#x3D;&quot;ml-5&quot;&gt;&lt;/p&gt;
+      &lt;!-- Search --&gt;
+      &lt;ul class&#x3D;&quot;align-items-center justify-content-center &quot;&gt;
+        &lt;form class&#x3D;&quot;form-inline mt-2 &quot;&gt;
+          &lt;div&gt;
+            &lt;input class&#x3D;&quot;form-control mr-xl-2 ml-5 &quot; style&#x3D;&quot;min-width: 550px;&quot; type&#x3D;&quot;search&quot; placeholder&#x3D;&quot;Pesquisar&quot;
+              aria-label&#x3D;&quot;Pesquisar&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-outline-success my-2 my-sm-0 &quot; type&#x3D;&quot;submit&quot;&gt;Pesquisar&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/ul&gt;
+      &lt;p class&#x3D;&quot;ml-5&quot;&gt;&lt;/p&gt;
+      &lt;p class&#x3D;&quot;ml-5&quot;&gt;&lt;/p&gt;
+      &lt;p class&#x3D;&quot;ml-5&quot;&gt;&lt;/p&gt;
+      &lt;p class&#x3D;&quot;ml-5&quot;&gt;&lt;/p&gt;
+      &lt;p class&#x3D;&quot;ml-5&quot;&gt;&lt;/p&gt;
+      &lt;ul class&#x3D;&quot; menu navbar-nav align-items-end justify-content-end&quot;&gt;
+        &lt;li *ngIf&#x3D;&#x27;mudarMenu()&#x3D;&#x3D;false&#x27; class&#x3D;&quot;nav-item active&quot;&gt;
+          &lt;a class&#x3D;&quot;nav-link ml-5 mr-5&quot; routerLink&#x3D;&#x27;/login&#x27;&gt;&lt;img class&#x3D;&quot;login&quot; src&#x3D;&quot;https://i.imgur.com/e6IEepg.png&quot;
+              alt&#x3D;&quot;logo&quot; width&#x3D;&quot;42px&quot; height&#x3D;&quot;50px&quot; class&#x3D;&quot;img-fluid&quot;&gt;&lt;strong _ngcontent-pfo-c35&#x3D;&quot;&quot;&gt; Entrar&lt;/strong&gt;&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;!--Produtor --&gt;
+      &lt;li *ngIf&#x3D;&#x27;menuProdutor()&#x3D;&#x3D;true&#x27; class&#x3D;&quot;nav-item dropdown&quot;&gt;
+        &lt;a class&#x3D;&quot;nav-link dropdown-toggle fontMenu mr-3 ml-5&quot; href&#x3D;&quot;#&quot; id&#x3D;&quot;navbarDropdown&quot; role&#x3D;&quot;button&quot;
+          data-toggle&#x3D;&quot;dropdown&quot; aria-haspopup&#x3D;&quot;true&quot; aria-expanded&#x3D;&quot;false&quot;&gt; &lt;img class&#x3D;&quot;login&quot;
+            src&#x3D;&quot; https://i.imgur.com/LNoXwI9.png&quot; alt&#x3D;&quot;logo&quot; width&#x3D;&quot;48px&quot; height&#x3D;&quot;50px&quot; class&#x3D;&quot;img-fluid&quot;&gt;
+        &lt;/a&gt;
+        &lt;div class&#x3D;&quot;dropdown-menu&quot; aria-labelledby&#x3D;&quot;navbarDropdown&quot;&gt;
+          &lt;a class&#x3D;&quot;dropdown-item fontMenu&quot; routerLink&#x3D;&#x27;/cadastro-produto&#x27;&gt;Cadastrar Produto&lt;/a&gt;
+          &lt;a class&#x3D;&quot;dropdown-item fontMenu&quot; (click)&#x3D;&#x27;sair()&#x27;&gt;Sair&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;!--Produtor --&gt;
+
+      &lt;!--Cliente--&gt;
+      &lt;li *ngIf&#x3D;&#x27;menuCliente()&#x3D;&#x3D;true&#x27; class&#x3D;&quot; menuCliente nav-item dropdown align-items-center justify-content-center&quot;&gt;
+        &lt;p class&#x3D;&quot;ml-5&quot;&gt;&lt;/p&gt;
+        &lt;p class&#x3D;&quot;ml-5&quot;&gt;&lt;/p&gt;
+        &lt;p class&#x3D;&quot;ml-5&quot;&gt;&lt;/p&gt;
+        &lt;a class&#x3D;&quot;nav-link dropdown-toggle fontMenu mr-3 ml-5 text-white position-relative &quot; href&#x3D;&quot;#&quot;
+          id&#x3D;&quot;navbarDropdown&quot; role&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;dropdown&quot; aria-haspopup&#x3D;&quot;true&quot; aria-expanded&#x3D;&quot;false&quot;&gt;
+          Minha Conta&lt;/a&gt;
+        &lt;div class&#x3D;&quot;dropdown-menu&quot; aria-labelledby&#x3D;&quot;navbarDropdown&quot;&gt;
+          &lt;a class&#x3D;&quot;dropdown-item fontMenu&quot; routerLink&#x3D;&quot;&quot;&gt;Meus Pedidos&lt;/a&gt;
+          &lt;a class&#x3D;&quot;dropdown-item fontMenu&quot; routerLink&#x3D;&#x27;/listaProdutos&#x27;&gt;Produtos&lt;/a&gt;
+          &lt;div class&#x3D;&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+          &lt;a class&#x3D;&quot;dropdown-item fontMenu&quot; (click)&#x3D;&#x27;sair()&#x27;&gt;Sair&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;!--Cliente--&gt;
+
+      &lt;!-- Adm --&gt;
+      &lt;li *ngIf&#x3D;&#x27;menuAdm()&#x3D;&#x3D;true&#x27; class&#x3D;&quot;nav-item dropdown&quot;&gt;
+        &lt;a class&#x3D;&quot;nav-link dropdown-toggle fontMenu mr-3 ml-5&quot; href&#x3D;&quot;#&quot; id&#x3D;&quot;navbarDropdown&quot; role&#x3D;&quot;button&quot;
+          data-toggle&#x3D;&quot;dropdown&quot; aria-haspopup&#x3D;&quot;true&quot; aria-expanded&#x3D;&quot;false&quot;&gt; &lt;img class&#x3D;&quot;login&quot;
+            src&#x3D;&quot; https://i.imgur.com/LNoXwI9.png&quot; alt&#x3D;&quot;logo&quot; width&#x3D;&quot;48px&quot; height&#x3D;&quot;50px&quot; class&#x3D;&quot;img-fluid&quot;&gt;
+        &lt;/a&gt;
+        &lt;div class&#x3D;&quot;dropdown-menu&quot; aria-labelledby&#x3D;&quot;navbarDropdown&quot;&gt;
+          &lt;a class&#x3D;&quot;dropdown-item fontMenu&quot; routerLink&#x3D;&#x27;/cadastro-produto&#x27;&gt;Cadastrar Produto&lt;/a&gt;
+          &lt;a class&#x3D;&quot;dropdown-item fontMenu&quot; (click)&#x3D;&#x27;sair()&#x27;&gt;Sair&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+
+      &lt;!-- Adm --&gt;
+
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./menu.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">
+@import url(&#x27;http://fonts.googleapis.com/css?family&#x3D;Poppins:200,300,400,500,600,700,800,900&amp;display&#x3D;swap&#x27;);
+
+*{
+    font-family: &#x27;Poppins&#x27;, sans-serif;
+}
+
+.menu li a
+{
+    color:white;
+}
+
+.btn-outline-success{
+    background-color: none;
+    border-color: white;
+    color: white;
+}
+.btn-outline-success:hover{
+    background-color: white;
+    border-color: #397900;
+    color: #397900;
+}
+
+.fontMenu{
+    color: black;
+    font-size: 18px;
+}
+.header1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.06s;
+    padding: 0;
+    margin: 0;
+    
+}
+.headerLogo{
+    position: relative;
+    font-weight: 700;
+    color: #fff
+}
+
+.header1{
+    
+        background-color: #397900;
+        transition: 0.06s;
+        z-index: 1;
+}
+.stick{
+    scroll-behavior: smooth;
+    transition: 0.06s;
+    opacity: .7;
+    z-index: 1;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><nav class="header1 navbar navbar-expand-lg navbar-light menuBar">  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"    aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">    <span class="navbar-toggler-icon"></span>  </button>  <div class="collapse navbar-collapse menuBar align-items-center text-center m-auto" id="conteudoNavbarSuportado">    <ul class="navbar-nav">      <li class="nav-item active">        <a class="nav-link ml-3" href="#"><img src="https://i.imgur.com/vEJY0PZ.png" alt="logo" width="120px"            height="31px" class="img-fluid"> <span class="sr-only">(página atual)</span></a>      </li>      <!-- foi -->      <!--Home-->      <div class="d-flex justify-content-center">        <ul class=" menu navbar-nav mr-auto align-items-center">          <li *ngIf=\'mudarMenu()==false\' class="nav-item active text-center">            <a class="nav-link ml-5 mr-3 aling" routerLink=\'/inicio\'>              <strong _ngcontent-pfo-c35="">Inicio</strong></a>          </li>          <li *ngIf=\'mudarMenu()==false \' class=" nav-item active">            <a class="nav-link mr-3 " routerLink=\'/ajuda\'>              <strong _ngcontent-pfo-c35="">Sobre</strong> </a>          </li>        </ul>      </div>      <!--Home-->      <p class="ml-5"></p>      <!-- Search -->      <ul class="align-items-center justify-content-center ">        <form class="form-inline mt-2 ">          <div>            <input class="form-control mr-xl-2 ml-5 " style="min-width: 550px;" type="search" placeholder="Pesquisar"              aria-label="Pesquisar">            <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Pesquisar</button>          </div>        </form>      </ul>      <p class="ml-5"></p>      <p class="ml-5"></p>      <p class="ml-5"></p>      <p class="ml-5"></p>      <p class="ml-5"></p>      <ul class=" menu navbar-nav align-items-end justify-content-end">        <li *ngIf=\'mudarMenu()==false\' class="nav-item active">          <a class="nav-link ml-5 mr-5" routerLink=\'/login\'><img class="login" src="https://i.imgur.com/e6IEepg.png"              alt="logo" width="42px" height="50px" class="img-fluid"><strong _ngcontent-pfo-c35=""> Entrar</strong></a>        </li>      </ul>      <!--Produtor -->      <li *ngIf=\'menuProdutor()==true\' class="nav-item dropdown">        <a class="nav-link dropdown-toggle fontMenu mr-3 ml-5" href="#" id="navbarDropdown" role="button"          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img class="login"            src=" https://i.imgur.com/LNoXwI9.png" alt="logo" width="48px" height="50px" class="img-fluid">        </a>        <div class="dropdown-menu" aria-labelledby="navbarDropdown">          <a class="dropdown-item fontMenu" routerLink=\'/cadastro-produto\'>Cadastrar Produto</a>          <a class="dropdown-item fontMenu" (click)=\'sair()\'>Sair</a>        </div>      </li>      <!--Produtor -->      <!--Cliente-->      <li *ngIf=\'menuCliente()==true\' class=" menuCliente nav-item dropdown align-items-center justify-content-center">        <p class="ml-5"></p>        <p class="ml-5"></p>        <p class="ml-5"></p>        <a class="nav-link dropdown-toggle fontMenu mr-3 ml-5 text-white position-relative " href="#"          id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">          Minha Conta</a>        <div class="dropdown-menu" aria-labelledby="navbarDropdown">          <a class="dropdown-item fontMenu" routerLink="">Meus Pedidos</a>          <a class="dropdown-item fontMenu" routerLink=\'/listaProdutos\'>Produtos</a>          <div class="dropdown-divider"></div>          <a class="dropdown-item fontMenu" (click)=\'sair()\'>Sair</a>        </div>      </li>      <!--Cliente-->      <!-- Adm -->      <li *ngIf=\'menuAdm()==true\' class="nav-item dropdown">        <a class="nav-link dropdown-toggle fontMenu mr-3 ml-5" href="#" id="navbarDropdown" role="button"          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img class="login"            src=" https://i.imgur.com/LNoXwI9.png" alt="logo" width="48px" height="50px" class="img-fluid">        </a>        <div class="dropdown-menu" aria-labelledby="navbarDropdown">          <a class="dropdown-item fontMenu" routerLink=\'/cadastro-produto\'>Cadastrar Produto</a>          <a class="dropdown-item fontMenu" (click)=\'sair()\'>Sair</a>        </div>      </li>      <!-- Adm -->    </ul>  </div></nav></div>'
+    var COMPONENTS = [{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AjudaComponent', 'selector': 'app-ajuda'},{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AreaProdutorComponent', 'selector': 'app-area-produtor'},{'name': 'CadastroComponent', 'selector': 'app-cadastro'},{'name': 'CategoriaDeleteComponent', 'selector': 'app-categoria-delete'},{'name': 'CategoriaEditComponent', 'selector': 'app-categoria-edit'},{'name': 'InicialComponent', 'selector': 'app-inicial'},{'name': 'InicioClienteComponent', 'selector': 'app-inicio-cliente'},{'name': 'InicioProdutorComponent', 'selector': 'app-inicio-produtor'},{'name': 'ListaProdutoComponent', 'selector': 'app-lista-produto'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'ProdutoComponent', 'selector': 'app-produto'},{'name': 'ProdutoDeleteComponent', 'selector': 'app-produto-delete'},{'name': 'ProdutoProdutorComponent', 'selector': 'app-produto-produtor'},{'name': 'RodapeComponent', 'selector': 'app-rodape'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'MenuComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MenuComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

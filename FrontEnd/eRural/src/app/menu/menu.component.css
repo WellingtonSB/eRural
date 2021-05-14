@@ -1,5 +1,13 @@
-.menuBar{
-    background-color: #397900;
+
+@import url('http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu li a
+{
+    color:white;
 }
 
 .btn-outline-success{
@@ -16,4 +24,35 @@
 .fontMenu{
     color: black;
     font-size: 18px;
+}
+.header1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.06s;
+    padding: 0;
+    margin: 0;
+    
+}
+.headerLogo{
+    position: relative;
+    font-weight: 700;
+    color: #fff
+}
+
+.header1{
+    
+        background-color: #397900;
+        transition: 0.06s;
+        z-index: 1;
+}
+.stick{
+    scroll-behavior: smooth;
+    transition: 0.06s;
+    opacity: .7;
+    z-index: 1;
 }

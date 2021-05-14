@@ -16,7 +16,7 @@ import org.hibernate.validator.constraints.URL;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "Categorias")
+@Table(name = "categorias")
 public class Categorias {
 
 	@Id
@@ -35,7 +35,7 @@ public class Categorias {
 	@URL
 	private String imagem;
 
-	@OneToMany(mappedBy = "categorias", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "categorias", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("categorias")
 	private List<Produtos> produtos;
 

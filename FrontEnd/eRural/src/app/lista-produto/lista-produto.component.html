@@ -1,0 +1,79 @@
+<div class="container mt-5">
+
+  <div class="row mt-5">
+    <div class="col-md-3 justify-content-center mt-5">
+
+      <h5>Categorias</h5>
+
+      <!--BARRA PESQUISA-->
+
+        <div class="form-group">
+          <input type="text" class="form-control" id="nome" placeholder="Pesquise um produto"
+            [(ngModel)]='nomeProduto' (keyup)='findByNomeProduto()'>
+        </div>
+
+      <!--/BARRA PESQUISA-->
+
+
+      <ul class="list-group list-group-flush">
+        <a *ngFor='let cat of listaCategorias' (click)='filtrarCategoria(cat.nome)'>
+          <li class="listaLateral list-group-item">{{cat.nome}}</li>
+        </a>
+        <a></a>
+        <li class="listaLateral list-group-item" (click)='findAllProduto()'>Todas</li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="col-md-9" *ngIf='filterOff == false'>
+      <div class="row" *ngFor='let cat of listaCategoria'>
+
+        <div *ngFor='let item of cat.produtos' class="product card mb-3 mr-3 mt-5 ml-3 mb-2">
+          <div class="imgbox">
+            <img class="img img-fluid" src="{{item.imagem}}">
+          </div>
+          <div class="details">
+
+            <h2>{{item.nome}}<br><span>Categoria: {{cat.nome}}</span></h2>
+
+            <div class="preco">{{item.preco}}</div>
+            <label class="label">Disponivel: {{item.quantidade}} itens</label>
+            <label class="label">Peso: {{item.peso}}</label>
+
+            <a class="a">Comprar Agora</a>
+            <!--ADICIONAR ROTA FAKE-->
+            <a class="carrinho" routerLink='/inicio-produtor' id='i'>Adicionar ao Carrinho</a>
+            <!--ADD ROTA FAKE-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-9" *ngIf='filterOff'>
+      <div class="row">
+
+        <div *ngFor='let item of listaProdutos' class="product card mb-3 mr-3 mt-5 ml-3 mb-2">
+          <div class="imgbox">
+            <img class="img img-fluid" src="{{item.imagem}}">
+          </div>
+          <div class="details">
+
+            <h2>{{item.nome}}<br><span>Categoria: {{item.categorias.nome}}</span></h2>
+
+            <div class="preco">{{item.preco}}</div>
+            <label class="label">Disponivel: {{item.quantidade}} itens</label>
+            <label class="label">Peso: {{item.peso}}</label>
+
+            <a class="a">Comprar Agora</a>
+            <!--ADICIONAR ROTA FAKE-->
+            <a class="carrinho" routerLink='/inicio-produtor' id='i'>Adicionar ao Carrinho</a>
+            <!--ADD ROTA FAKE-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -15,7 +15,7 @@ import org.hibernate.validator.constraints.URL;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "Produtos")
+@Table(name = "produtos")
 public class Produtos {
 
 	@Id
@@ -23,27 +23,36 @@ public class Produtos {
 	private long id;
 
 	@NotNull
-	@Size(min = 3, max = 30)
 	private String nome;
-
 	@NotNull
 	private int quantidade;
-
 	@NotNull
 	private double peso;
-
 	@NotNull
-	@Digits(integer = 5, fraction = 2)
-										
 	private double preco;
-	
-	@NotNull	
+	@NotNull
+	private String descricao;
+	@NotNull
 	@URL
 	private String imagem;
 
+	
 	@ManyToOne
 	@JsonIgnoreProperties("produtos")
 	private Categorias categorias;
+
+	@ManyToOne
+	@JsonIgnoreProperties("produto")
+	private Usuario usuario;
+	
+	
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
 
 	public long getId() {
 		return id;
@@ -101,7 +110,14 @@ public class Produtos {
 		this.imagem = imagem;
 	}
 
-	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
 	
 	
 }

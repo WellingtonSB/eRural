@@ -1,0 +1,145 @@
+<div class="mt-5">
+  <!--chamadaTop-->
+  <div class="row mt-5 mb-5 text-center justify-content-center">
+    <div class="container mt-5">
+      <h1>Bem-vindo(a) Administrador(a)</h1>
+      <h3>Aqui você cria, edita e deleta as Categorias</h3>
+
+      <!--MENU-->
+      <div class="container" id="postagens">
+        <!--NAV-->
+        <nav>
+          <ul class=" nav nav-tabs justify-content-center text-center d-flex" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="todas" data-toggle="tab" href="#todasCategorias" role="tab"
+                aria-controls="nav-todas-tab" aria-selected="true">Todas Categorias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="Produtos" data-toggle="tab" href="#categoriaProdutos" role="tab"
+                aria-controls="nav-categoriaProdutos-tab" aria-selected="false">Todos os produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="criar" data-toggle="tab" href="#Criar" role="tab" aria-controls="nav-criar-tab"
+                aria-selected="false">Adicionar Categoria</a>
+            </li>
+          </ul>
+          <hr>
+        </nav>
+        <!--/NAV-->
+
+
+        <div class="tab-content texto" id="nav-tabContent">
+          <!--TODASCATEGORIAS-->
+          <div class="tab-pane fade show active" id="todasCategorias" role="tabpanel"
+            aria-labelledby="nav-todasPostagens-tab">
+
+            <!--BARRA PESQUISA-->
+            <div class="row d-flex justify-content-center mt-5 mb-5">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="categoria"
+                    placeholder="Digite nome de categoria para pesquisar" [(ngModel)]='nomeCategoria'
+                    (keyup)='findByNomeCategoria()'>
+                </div>
+              </div>
+            </div>
+            <!--/BARRA PESQUISA-->
+              <!--TODASCATEGORIAS-->
+
+              <div class="card-columns">
+                <div class="card text-center m-2" *ngFor='let item of listaCategoria'>
+                  <div class="card-body">
+                    <div><img src='{{item.imagem}}' width="70" height="100"></div>
+                    <h5 class="card-title m-0">{{item.nome}}</h5>
+                    <p class="card-text mt-3">{{item.descricao}}</p>
+
+                    <a class="card1" [routerLink]="['/categoria-edit', item.id]">Editar</a>
+                    <a class="card2" [routerLink]="['/categoria-delete', item.id]">Apagar</a>
+
+                  </div>
+                </div>
+              </div>
+            <!--/TODASCATEGORIAS-->
+
+          </div>
+
+
+
+
+          <!--PRODUTOS-->
+          <div class="tab-pane fade" id="categoriaProdutos" role="tabpanel">
+
+               <!--BARRA PESQUISA-->
+               <div class="row d-flex justify-content-center mt-5 mb-5">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="nome"
+                      placeholder="Digite nome de produto para pesquisar" [(ngModel)]='nomeProduto'
+                      (keyup)='findByNomeProduto()'>
+                  </div>
+                </div>
+              </div>
+              <!--/BARRA PESQUISA-->
+
+              <div class="card-columns">
+              <div *ngFor='let categoria of listaCategoria'>
+                <div class="card text-center m-2" *ngFor='let item of categoria.produtos'>
+                  <div class="card-body">
+                    <div class="display-inline img-fluid"><img src='{{item.imagem}}' width="70" height="120"></div>
+                    <h5 class="card-title m-0">{{item.nome}}</h5>
+                    <p class="card-text mt-3">Categoria: {{categoria.nome}}</p>
+                    <p class="card-text mt-3">{{item.descricao}}</p>
+                    <p class="card-text"><small class="text-muted">Postado por: {{item.usuario.nome}}</small></p>
+                    <a class="card2" [routerLink]="['/delete-produto', item.id]">Apagar</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--/PRODUTOS-->
+
+
+
+          <div class="tab-pane fade d-flex justify-content-center" id="Criar" role="tabpanel"
+            aria-labelledby="nav-criar-tab">
+            <!--FORMULARIO-->
+            <div class="col-md-6">
+              <div id="formExemplo" data-toggle="validator" role="form">
+                <div class="form-group">
+                  <label for="textNome" class="control-label">Nome</label>
+                  <input [(ngModel)]='categoria.nome' id="textNome" class="form-control" placeholder="Nome do Produto"
+                    type="text" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="textDescricao" class="control-label">Descrição</label>
+                  <input [(ngModel)]='categoria.descricao' id="textQuantidade" class="form-control"
+                    placeholder="Digite descrição" type="text" required>
+                </div>
+                <div class="form-group">
+                  <label for="textPeso" class="control-label">Imagem</label>
+                  <input [(ngModel)]='categoria.imagem' id="textPeso" class="form-control" placeholder="url imagem"
+                    type="text" required>
+                </div>
+
+                <div class="d-flex justify-content-center mb-5 mt-5">
+                  <!--Botao Cancelar-->
+                  <button type="submit" class="btn btn-outline-danger mr-4" routerLink="/login">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                    Cancelar</button>
+                  <!--/Botao cancelar-->
+                  <!--Botao cadastrar-->
+                  <button type="submit" class="btn btn-outline-success ml-4" (click)='cadastrarCategoria()'>
+                    <i class="fa fa-check" aria-hidden="true"></i> Cadastrar</button>
+                  <!--/Botao cadastrar-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--/FORMULARIO-->
+        </div>
+        <!--/CARD-->
+      </div>
+    </div>
+  </div>
+</div>
