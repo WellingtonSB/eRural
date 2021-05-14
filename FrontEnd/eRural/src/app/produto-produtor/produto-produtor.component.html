@@ -50,17 +50,19 @@
             </div>
             <!--/BARRA PESQUISA-->
 
-            <div class="card-columns">
-              <div *ngFor='let categ of listaCategoria'>
-                <div class="card text-center m-2" *ngFor='let prod of categ.produtos'>
-                  <div class="card-body">
-                    <div><img src='{{prod.imagem}}' width="70" height="100"></div>
-                    <h5 class="card-title m-0">{{prod.nome}}</h5>
-                    <p class="card-text mt-3">{{prod.descricao}}</p>
+                  <!--LISTA CATEGORIAS-->
+                  <div class="card-columns">
+                    <div class="card text-center m-2" *ngFor='let item of listaCategoria'>
+                      <div class="card-body">
+                        <div><img src='{{item.imagem}}' width="70" height="100"></div>
+                        <h5 class="card-title m-0">{{item.nome}}</h5>
+                        <p class="card-text mt-3">{{item.descricao}}</p>
+
+
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
+                  <!--/LISTA CATEGORIAS-->
             <!--/LISTA CATEGORIAS-->
           </div>
 
@@ -81,12 +83,11 @@
             </div>
             <!--/BARRA PESQUISA-->
 
-            <div class="card-columns">
-              <div class="card text-center m-2" *ngFor='let item of listaProduto | orderBy: key: reverse'>
+            <div class="card-columns" *ngFor='let item of usuario.produto'>
+              <div class="card text-center m-2">
                 <div class="card-body">
-                  <div class="display-inline"><img src='{{item.imagem}}' width="70" height="100"></div>
+                  <div><img src='{{item.imagem}}' width="70" height="100"></div>
                   <h5 class="card-title m-0">{{item.nome}}</h5>
-                  <h3 class="card-title m-0">{{categoria.nome}}</h3>
                   <p class="card-text mt-3">{{item.descricao}}</p>
 
                   <a class="text-info mr-3" [routerLink]="['/editar-produto', item.id]">Editar</a>
