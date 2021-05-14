@@ -33,7 +33,7 @@
           <!--TODASCATEGORIAS-->
           <div class="tab-pane fade show active" id="todasCategorias" role="tabpanel"
             aria-labelledby="nav-todasPostagens-tab">
-            <div class="product card mr-3 mt-5 ml-3 mb-5" *ngFor='let item of listaCategoria'>
+            <div class="product card mr-3 mt-5 ml-3 mb-5" *ngFor='let item of listaCategoria | orderBy: key : reverse'>
               <div class="imgbox">
                 <img src='{{item.imagem}}'>
               </div>
@@ -50,7 +50,7 @@
           <div class="tab-pane fade show active" id="categoriaProdutos" role="tabpanel">
 
             <div class="product card mr-3 mt-5 ml-3 mb-5" *ngFor='let categoria of listaCategoria'>
-              <div *ngFor='let item of categoria.produtos'>
+              <div *ngFor='let item of categoria.produtos | orderBy: key: reverse'>
                 <div class="imgbox">
                   <img src='{{item.imagem}}'>
                 </div>

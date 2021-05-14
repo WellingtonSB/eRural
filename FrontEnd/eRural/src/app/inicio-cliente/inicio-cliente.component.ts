@@ -16,6 +16,7 @@ export class InicioClienteComponent implements OnInit {
     private alertas: AlertasService
   ) { }
 
+
   ngOnInit() {
     if (this.token == null) {
       this.alertas.showAlertDanger('Sua seção expirou, faça o login novamente')

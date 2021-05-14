@@ -21,6 +21,9 @@ export class ListaProdutoComponent implements OnInit {
   categoria:Categorias = new Categorias()
   listaCategorias: Categorias[]
 
+  key = 'data'
+  reverse = true
+
   constructor(
     public router: Router,
     public authService:AuthService,

@@ -21,6 +21,15 @@ getAllCategoria(): Observable<Categorias[]>{
     return this.http.get<Categorias[]>(`${environment.server}/categorias`, this.token)
 }
 
+/* VAMOS PEGAR O TEMA RESPONSAVEL PELO ID */
+getByIdCategoria(id: number): Observable<Categorias>{
+  return this.http.get<Categorias>(`${environment.server}/categorias/${id}`, this.token)
+}
+
+getByNomeCategoria(nome: string): Observable<Categorias[]>{
+  return this.http.get<Categorias[]>(`${environment.server}/categorias/nome/${nome}`, this.token)
+}
+
 postCategoria(categorias: Categorias): Observable<Categorias>{
   return this.http.post<Categorias>(`${environment.server}/categorias`, categorias, this.token)
 }
@@ -32,9 +41,6 @@ putCategoria(categorias: Categorias): Observable<Categorias>{
 deleteCategoria(id: number){
   return this.http.delete(`${environment.server}/categorias/${id}`, this.token)
 }
-/* VAMOS PEGAR O TEMA RESPONSAVEL PELO ID */
-getByIdCategoria(id: number): Observable<Categorias>{
-  return this.http.get<Categorias>(`${environment.server}/categorias/${id}`, this.token)
-}
+
 
 }

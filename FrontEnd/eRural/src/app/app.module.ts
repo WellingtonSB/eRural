@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { OrderModule } from 'ngx-order-pipe';
 
 import { AppComponent } from './app.component';
 import { RodapeComponent } from './rodape/rodape.component';
@@ -24,6 +25,7 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
 import { AlertasComponent } from './alertas/alertas.component';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 
 
 
@@ -56,7 +58,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     HttpClientModule,
     FontAwesomeModule,
     FormsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    OrderModule
   ],
   providers: [{
     provide: LocationStrategy,
