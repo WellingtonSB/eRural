@@ -39,4 +39,6 @@ export class ProdutoServiceService {
     return this.http.delete(`${environment.server}/produtos/${id}`, this.token)
   }
 
+  
+
 }

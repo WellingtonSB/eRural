@@ -22,11 +22,12 @@ import { ProdutoComponent } from './edit/produto/produto.component';
 import { AdminComponent } from './admin/admin.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+
 import { AlertasComponent } from './alertas/alertas.component';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
-
+import { AreaProdutorComponent } from './area-produtor/area-produtor.component';
 
 
 
@@ -48,8 +49,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     AdminComponent,
     CategoriaEditComponent,
     CategoriaDeleteComponent,
-    AlertasComponent
-
+    AlertasComponent,
+    AreaProdutorComponent
 
   ],
   imports: [

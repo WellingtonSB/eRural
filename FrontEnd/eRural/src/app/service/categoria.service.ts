@@ -43,4 +43,15 @@ deleteCategoria(id: number){
 }
 
 
+getByNomeCategoria(nome: string): Observable<Categorias[]>{
+  return this.http.get<Categorias[]>(`${environment.server}/categorias/nome/${nome}`, this.token)
+}
+
+  filtrarCategorias(){
+    if(environment.catFilter == ''){
+
+    }
+
+  }
+
 }

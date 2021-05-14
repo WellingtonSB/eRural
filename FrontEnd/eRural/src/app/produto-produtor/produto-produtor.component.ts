@@ -16,6 +16,7 @@ import { ProdutoServiceService } from '../service/produtos-service.service';
   styleUrls: ['./produto-produtor.component.css']
 })
 export class ProdutoProdutorComponent implements OnInit {
+
   produto: Produtos = new Produtos()
   produtoUser: boolean = false
   idUser = environment.id
@@ -35,7 +36,6 @@ export class ProdutoProdutorComponent implements OnInit {
   reverse = true
 
   constructor(
-    //aqui add o router //INJETANDO OS SERVICES
     private router: Router,
     private auth: AuthService,
     private catService: CategoriaService,
@@ -84,7 +84,6 @@ export class ProdutoProdutorComponent implements OnInit {
   findByIdUsuario(){
       this.auth.getByIdUSer(this.idUser).subscribe((resp: Usuario)=>{
       this.usuario = resp
-      /* this.postarProduto() */
       this.produto = new Produtos()
     })
   }
