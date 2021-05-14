@@ -17,6 +17,7 @@ export class InicioClienteComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
     if (this.token == null) {
       this.alertas.showAlertDanger('Sua seção expirou, faça o login novamente')
       this.router.navigate(['/inicio'])
