@@ -38,41 +38,62 @@
             aria-labelledby="nav-todasPostagens-tab">
             <!--LISTA CATEGORIAS-->
 
-            <div class="card-columns" >
-              <div class="card text-center m-2" *ngFor='let item of listaCategoria'>
-                <div class="card-body">
-                  <div class="display-inline"><img src='{{item.imagem}}' width="70" height="120"></div>
-                  <h5 class="card-title m-0">{{item.nome}}</h5>
-                  <p class="card-text mt-3">{{item.descricao}}</p>
-                </div>
+         <!--BARRA PESQUISA-->
+         <div class="row d-flex justify-content-center mt-5 mb-5">
+          <div class="col-md-4">
+
+            <div class="form-group">
+              <input type="text" class="form-control" id="categoria" placeholder="Digite nome de categoria para pesquisar" [(ngModel)]='nomeCategoria' (keyup)='findByNomeCategoria()'>
+            </div>
+
+          </div>
+
+        </div>
+        <!--/BARRA PESQUISA-->
+
+          <div class="card-columns">
+            <div class="card text-center m-2" *ngFor='let categ of listaCategoria'>
+              <div class="card text-center m-2" *ngFor='let prod of categ.produtos'>
+              <div class="card-body">
+                <div><img src='{{prod.imagem}}' width="70" height="100"></div>
+                <h5 class="card-title m-0">{{prod.nome}}</h5>
+                <p class="card-text mt-3">{{prod.descricao}}</p>
               </div>
             </div>
-            <!--/LISTA CATEGORIAS-->
+          </div>
+          </div>
+          <!--/LISTA CATEGORIAS-->
           </div>
 
           <div class="tab-pane fade" id="Produtos" role="tabpanel">
-            <!--LISTA PRODUTO DO PRODUTOR-->
+           <!--LISTA PRODUTO DO PRODUTOR-->
+
+          <!--BARRA PESQUISA-->
+          <div class="row d-flex justify-content-center mt-5 mb-5">
+            <div class="col-md-4">
+
+              <div class="form-group">
+                <input type="text" class="form-control" id="nome" placeholder="Digite nome de produto para pesquisar" [(ngModel)]='nomeProduto' (keyup)='findByNomeProduto()'>
+              </div>
+
+            </div>
+
+          </div>
+          <!--/BARRA PESQUISA-->
 
             <div class="card-columns" >
-              <div class="card text-center m-2" *ngFor='let item of usuario.produto'>
+              <div class="card text-center m-2" *ngFor='let item of listaProduto | orderBy: key: reverse'>
                 <div class="card-body">
-                  <div class="display-inline img-fluid"><img src='{{item.imagem}}' width="70" height="120"></div>
-                  <p class="card-text m-auto">Categoria: {{item.categorias.nome}}</p>
-                  <h5 class="card-title m-auto">{{item.nome}}</h5><span class="preco"> Preço: {{item.preco}}</span>
-                  <p class="card-text m-auto">{{item.descricao}}</p>
-                  <label class="label">Peso: {{item.peso}}</label>
-                  <a class="card1" [routerLink]="['/editar-produto', item.id]">Editar</a>
-                  <a class="card2" [routerLink]="['/delete-produto', item.id]">Apagar</a>
+                  <div class="display-inline"><img src='{{item.imagem}}' width="70" height="100"></div>
+                  <h5 class="card-title m-0">{{item.nome}}</h5>
+                  <h3 class="card-title m-0">{{categoria.nome}}</h3>
+                  <p class="card-text mt-3">{{item.descricao}}</p>
 
+                  <a class="text-info mr-3" [routerLink]="['/editar-produto', item.id]">Editar</a>
+                  <a class="text-danger" [routerLink]="['/delete-produto', item.id]">Apagar</a>
                 </div>
               </div>
             </div>
-
-            <!--
-              <div class="details">
-
-              </div>
-            </div> -->
             <!--/LISTA PRODUTO DO PRODUTOR-->
           </div>
 

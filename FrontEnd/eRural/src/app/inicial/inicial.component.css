@@ -1,4 +1,9 @@
-
+hr {
+    width: 40cm;
+    position: absolute;
+    justify-content: center;
+    left: 80px;
+}
 
 .jumbotronBackground{
 background-color: rgb(107, 205, 50);
