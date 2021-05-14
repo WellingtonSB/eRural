@@ -1,10 +1,10 @@
+import { Produtos } from './../model/Produtos';
 import { AlertasService } from './../service/alertas.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { environment } from 'src/environments/environment.prod';
 import { Categorias } from '../model/Categorias';
-import { Produtos } from '../model/Produtos';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
@@ -22,12 +22,18 @@ export class ProdutoProdutorComponent implements OnInit {
   idUser = environment.id
   categoria: Categorias = new Categorias()
   usuario: Usuario = new Usuario()
+  nomeProduto: string
+  
 
   token = localStorage.getItem('token')
 
   listaCategoria: Categorias[]
   listaProduto: Produtos[]
   idCategoria: number
+  nomeCategoria: string
+
+  key = 'data'
+  reverse = true
 
   constructor(
     private router: Router,
@@ -39,7 +45,7 @@ export class ProdutoProdutorComponent implements OnInit {
 
   ngOnInit() {
     if (this.token == null) {
-      alert('Sua seção expirou, faça o login novamente')
+      this.alertas.showAlertDanger('Sua seção expirou, faça o login novamente')
       this.router.navigate(['/inicio'])
     }
     window.scroll(0, 0)
@@ -56,13 +62,15 @@ export class ProdutoProdutorComponent implements OnInit {
 
   findAllProdutos(){
     this.prodService.getAllProduto().subscribe((resp: Produtos[])=>{
-      resp.forEach((item)=>{
+     this.listaProduto = resp
+     
+      /* resp.forEach((item)=>{
         if(item.usuario.id == this.idUser){
           this.produtoUser = true
         }else {
           this.produtoUser = false
         }
-      })
+      }) */
 
     })
   }
@@ -93,7 +101,31 @@ export class ProdutoProdutorComponent implements OnInit {
       this.router.navigate(['/inicio-produtor'])
 
     })
-
   }
+
+  
+  findByNomeProduto(){
+    /* this.alertas.showAlertSuccess('Num vaiiiiiiii!')*/
+      if(this.nomeProduto == '') {
+        this.findAllProdutos()
+        console.log('thcau if ' + this.nomeProduto)
+      } else {       
+        console.log("oi else" + this.nomeProduto)
+        this.prodService.getByNomeProduto(this.nomeProduto).subscribe((resp: Produtos[]) => {
+          this.listaProduto = resp
+        })
+      } 
+  }
+
+  findByNomeCategoria(){
+    if(this.nomeProduto == '') {
+      this.findAllCategoria()
+    } else {       
+      this.catService.getByNomeCategoria(this.nomeCategoria).subscribe((resp: Categorias[]) => {
+        this.listaCategoria = resp
+      })
+     } 
+
+}
 
 }
