@@ -33,44 +33,57 @@
           <div class="tab-pane fade show active" id="todasCategorias" role="tabpanel"
             aria-labelledby="nav-todasPostagens-tab">
 
-            <div class="product card mr-3 mt-5 ml-3 mb-5" *ngFor='let item of listaCategoria | orderBy: key : reverse'>
-              <div class="imgbox">
-                <img src='{{item.imagem}}'>
-              </div>
-              <div class="details">
-                <h5 class="card-title m-0">{{item.nome}}</h5>
-                <p class="card-text mt-3">{{item.descricao}}</p>
-                <a class="card1" [routerLink]="['/categoria-edit', item.id]">Editar</a>
-                <a class="card2" [routerLink]="['/categoria-delete', item.id]">Apagar</a>
+            <!--BARRA PESQUISA-->
+            <div class="row d-flex justify-content-center mt-5 mb-5">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="categoria"
+                    placeholder="Digite nome de categoria para pesquisar" [(ngModel)]='nomeCategoria'
+                    (keyup)='findByNomeCategoria()'>
+                </div>
               </div>
             </div>
+            <!--/BARRA PESQUISA-->
+              <!--TODASCATEGORIAS-->
+
+              <div class="card-columns">
+                <div class="card text-center m-2" *ngFor='let item of listaCategoria'>
+                  <div class="card-body">
+                    <div><img src='{{item.imagem}}' width="70" height="100"></div>
+                    <h5 class="card-title m-0">{{item.nome}}</h5>
+                    <p class="card-text mt-3">{{item.descricao}}</p>
+
+                    <a class="card1" [routerLink]="['/categoria-edit', item.id]">Editar</a>
+                    <a class="card2" [routerLink]="['/categoria-delete', item.id]">Apagar</a>
+
+                  </div>
+                </div>
+              </div>
             <!--/TODASCATEGORIAS-->
 
           </div>
-          <div class="tab-pane fade show active" id="categoriaProdutos" role="tabpanel">
 
-            <div class="product card mr-3 mt-5 ml-3 mb-5" *ngFor='let categoria of listaCategoria'>
-              <div *ngFor='let item of categoria.produtos | orderBy: key: reverse'>
-                <div class="imgbox">
-                  <img src='{{item.imagem}}'>
-                </div>
-                <div class="details">
 
-                  <h5 class="card-title m-0">{{item.nome}}</h5>
-                  <p class="card-text mt-3">{{item.descricao}}</p>
-                  <a class="card1" [routerLink]="['/categoria-edit', item.id]">Editar</a>
-                  <a class="card2" [routerLink]="['/categoria-delete', item.id]">Apagar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--/TODASCATEGORIAS-->
+
 
           <!--PRODUTOS-->
           <div class="tab-pane fade" id="categoriaProdutos" role="tabpanel">
-            <div class="card-columns">
+
+               <!--BARRA PESQUISA-->
+               <div class="row d-flex justify-content-center mt-5 mb-5">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="nome"
+                      placeholder="Digite nome de produto para pesquisar" [(ngModel)]='nomeProduto'
+                      (keyup)='findByNomeProduto()'>
+                  </div>
+                </div>
+              </div>
+              <!--/BARRA PESQUISA-->
+
+              <div class="card-columns">
               <div *ngFor='let categoria of listaCategoria'>
-              <div class="card text-center m-2" *ngFor='let item of categoria.produtos'>
+                <div class="card text-center m-2" *ngFor='let item of categoria.produtos'>
                   <div class="card-body">
                     <div class="display-inline img-fluid"><img src='{{item.imagem}}' width="70" height="120"></div>
                     <h5 class="card-title m-0">{{item.nome}}</h5>
@@ -82,7 +95,10 @@
                 </div>
               </div>
             </div>
-        </div>
+          </div>
+          <!--/PRODUTOS-->
+
+
 
           <div class="tab-pane fade d-flex justify-content-center" id="Criar" role="tabpanel"
             aria-labelledby="nav-criar-tab">

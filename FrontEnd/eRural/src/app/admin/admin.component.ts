@@ -17,6 +17,8 @@ import { ProdutoServiceService } from '../service/produtos-service.service';
 export class AdminComponent implements OnInit {
 
   produto: Produtos = new Produtos()
+  nomeProduto: string
+  nomeCategoria: string
 
   idUser = environment.id
   categoria: Categorias = new Categorias()
@@ -31,17 +33,18 @@ export class AdminComponent implements OnInit {
   key = 'data'
   reverse = true
 
-
   constructor(
     private router: Router,
     private auth: AuthService,
     private categoriaService: CategoriaService,
-    private alertas: AlertasService
+    private alertas: AlertasService,
+    private prodService: ProdutoServiceService
   ) { }
 
   ngOnInit() {
-    if(this.token == null){
-      this.router.navigate(['/home'])
+    if (this.token == null) {
+      this.alertas.showAlertDanger('Sua seção expirou, faça o login novamente')
+      this.router.navigate(['/inicio'])
     }
     window.scroll(0,0)
     this.findAllCategorias()
@@ -74,6 +77,43 @@ export class AdminComponent implements OnInit {
       this.categoria = new Categorias() //PARA ZERAR O CAMPO DE CATEGORIA APÓS CADASTRAR A CATEGORIA NOVA
     })
   }
+
+  findAllProdutos(){
+    this.prodService.getAllProduto().subscribe((resp: Produtos[])=>{
+     this.listaProduto = resp
+
+      /* resp.forEach((item)=>{
+        if(item.usuario.id == this.idUser){
+          this.produtoUser = true
+        }else {
+          this.produtoUser = false
+        }
+      }) */
+
+    })
+  }
+
+  findByNomeProduto(){
+      if(this.nomeProduto == '') {
+        this.findAllProdutos()
+      } else {
+        this.prodService.getByNomeProduto(this.nomeProduto).subscribe((resp: Produtos[]) => {
+          this.listaProduto = resp
+        })
+      }
+  }
+
+  findByNomeCategoria(){
+    if(this.nomeProduto == '') {
+      this.findAllCategorias()
+    } else {
+      this.categoriaService.getByNomeCategoria(this.nomeCategoria).subscribe((resp: Categorias[]) => {
+        this.listaCategoria = resp
+      })
+     }
+
+}
+
 }
 
 

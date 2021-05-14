@@ -4,6 +4,17 @@
     <div class="col-md-3 justify-content-center mt-5">
 
       <h5>Categorias</h5>
+
+      <!--BARRA PESQUISA-->
+
+        <div class="form-group">
+          <input type="text" class="form-control" id="nome" placeholder="Pesquise um produto"
+            [(ngModel)]='nomeProduto' (keyup)='findByNomeProduto()'>
+        </div>
+
+      <!--/BARRA PESQUISA-->
+
+
       <ul class="list-group list-group-flush">
         <a *ngFor='let cat of listaCategorias' (click)='filtrarCategoria(cat.nome)'>
           <li class="listaLateral list-group-item">{{cat.nome}}</li>
@@ -14,7 +25,7 @@
       </ul>
     </div>
 
-   
+
 
     <div class="col-md-9" *ngIf='filterOff == false'>
       <div class="row" *ngFor='let cat of listaCategoria'>
@@ -66,4 +77,3 @@
     </div>
   </div>
 </div>
-

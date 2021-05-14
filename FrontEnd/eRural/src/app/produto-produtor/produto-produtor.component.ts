@@ -23,7 +23,7 @@ export class ProdutoProdutorComponent implements OnInit {
   categoria: Categorias = new Categorias()
   usuario: Usuario = new Usuario()
   nomeProduto: string
-  
+
 
   token = localStorage.getItem('token')
 
@@ -63,7 +63,7 @@ export class ProdutoProdutorComponent implements OnInit {
   findAllProdutos(){
     this.prodService.getAllProduto().subscribe((resp: Produtos[])=>{
      this.listaProduto = resp
-     
+
       /* resp.forEach((item)=>{
         if(item.usuario.id == this.idUser){
           this.produtoUser = true
@@ -103,28 +103,25 @@ export class ProdutoProdutorComponent implements OnInit {
     })
   }
 
-  
+
   findByNomeProduto(){
-    /* this.alertas.showAlertSuccess('Num vaiiiiiiii!')*/
       if(this.nomeProduto == '') {
         this.findAllProdutos()
-        console.log('thcau if ' + this.nomeProduto)
-      } else {       
-        console.log("oi else" + this.nomeProduto)
+      } else {
         this.prodService.getByNomeProduto(this.nomeProduto).subscribe((resp: Produtos[]) => {
           this.listaProduto = resp
         })
-      } 
+      }
   }
 
   findByNomeCategoria(){
     if(this.nomeProduto == '') {
       this.findAllCategoria()
-    } else {       
+    } else {
       this.catService.getByNomeCategoria(this.nomeCategoria).subscribe((resp: Categorias[]) => {
         this.listaCategoria = resp
       })
-     } 
+     }
 
 }
 

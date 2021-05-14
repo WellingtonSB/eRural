@@ -22,6 +22,7 @@ export class ListaProdutoComponent implements OnInit {
   listaCategorias: Categorias[]
   listaCategoria: Categorias[]
   filterOff: boolean = true
+  nomeProduto: string
 
   key = 'data'
   reverse = true
@@ -70,5 +71,32 @@ export class ListaProdutoComponent implements OnInit {
       })
   }
 
+  findAllProdutos(){
+    this.produtoService.getAllProduto().subscribe((resp: Produtos[])=>{
+     this.listaProdutos = resp
+
+      /* resp.forEach((item)=>{
+        if(item.usuario.id == this.idUser){
+          this.produtoUser = true
+        }else {
+          this.produtoUser = false
+        }
+      }) */
+
+    })
+  }
+
+  findByNomeProduto(){
+    /* this.alertas.showAlertSuccess('Num vaiiiiiiii!')*/
+      if(this.nomeProduto == '') {
+        this.findAllProdutos()
+        console.log('thcau if ' + this.nomeProduto)
+      } else {
+        console.log("oi else" + this.nomeProduto)
+        this.produtoService.getByNomeProduto(this.nomeProduto).subscribe((resp: Produtos[]) => {
+          this.listaProdutos = resp
+        })
+      }
+  }
 
 }
