@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  server: 'http://localhost:8080',
+  server: 'https://e-rural.herokuapp.com',
   token: '',
   nome: '',
   id: 0,
