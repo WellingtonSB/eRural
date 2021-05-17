@@ -64,7 +64,7 @@
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/jaquelinecavalaro"><img style="border-radius: 50%;" src="https://i.imgur.com/qLhhCsp.png" height="350px;" width="350px;" alt=""/><br /><sub><b>Jaqueline Cavalaro</b></sub></a><br /></td>
+    <td align="center"><a href="https://avatars.githubusercontent.com/u/79109066?v=4"><img style="border-radius: 50%;" src="https://i.imgur.com/qLhhCsp.png" width="350px;" alt=""/><br /><sub><b>Jaqueline Cavalaro</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/jessica403"><img style="border-radius: 50%;" src="https://i.imgur.com/qSruIMU.png" width="350px;" alt=""/><br /><sub><b>Jessica Siqueira</b></sub></a><br /></a></td>
     <td align="center"><a href="https://github.com/Palmirafilipe"><img style="border-radius: 50%;" src="https://i.imgur.com/RhwQKNx.png" width="350px;" alt=""/><br /><sub><b>Palmira Filipe</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/WellingtonSB?tab=repositories"><img style="border-radius: 50%;" src="https://i.imgur.com/Nk3nlHi.png" width="350px;" alt=""/><br /><sub><b>Wellington Bezerra </b></sub></a><br /></td>
