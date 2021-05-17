@@ -11,7 +11,7 @@
 
 
 
-#### 🍇 Sobre o Projeto
+####  Sobre o Projeto
 
 ##### eRural - E-commerce responsável em interligar o agricultor diretamente ao consumidor final. Nossa intenção é empoderar o pequeno produtor e trazer para o cliente um consumo por preço justo. Para o produtor: Uma alternativa rentável sem necessidade de se preocupar com a criação do E-commerce. 
 
@@ -20,7 +20,7 @@
 
 ---
 
-#### 🛠 Tecnologias Utilizadas
+#### Tecnologias Utilizadas
 
 
 #### **Website**  ([Angular](https://angular.io/)  +  [TypeScript](https://www.typescriptlang.org/))
