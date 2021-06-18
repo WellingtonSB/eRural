@@ -58,6 +58,7 @@ export class ListaProdutoComponent implements OnInit {
   }
 
   findAllCategoria(){
+     /*Lista varias  categorias*/
     this.categoriaService.getAllCategoria().subscribe((resp:Categorias[])=>{
       this.listaCategorias=resp
     })
@@ -66,6 +67,7 @@ export class ListaProdutoComponent implements OnInit {
   filtrarCategoria(nome: string){
 
       this.categoriaService.getByNomeCategoria(nome).subscribe((resp:Categorias[])=>{
+        /*Lista apenas uma categoria*/
         this.listaCategoria = resp
         this.filterOff = false
       })
